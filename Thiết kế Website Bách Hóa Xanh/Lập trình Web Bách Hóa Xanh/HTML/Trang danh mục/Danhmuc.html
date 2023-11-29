@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Đồ án 2 - Bách hóa xanh</title>
+  <title>Danh mục sản phẩm</title>
   <link rel="stylesheet" href="Danhmuc.css">
   <link rel="stylesheet" href="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/TrangChu.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400&display=swap" rel="stylesheet">
 
-  <script src="Danhmuc.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,43 +20,39 @@
     rel="stylesheet">
 </head>
 
+
 <body>
   <header>
     <nav>
-      <div class="menu">
+      <div class="menuHead">
         <div class="logo">
-          <img src="Anh/header/logo.jpg">
           <a>Bách hóa xanh</a>
         </div>
         <div class="search-text">
-          <input type="search" name="Tìm kiếm" placeholder="Tìm kiếm của bạn ...">
-          <img class="icon-search" src="Anh/header/search.png ">
+          <input type="search" name="Tìm kiếm" placeholder="Tìm kiếm của bạn ..." />
+          <img class="icon-search"
+            src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/header/search-interface-symbol.png" />
         </div>
-
         <ul>
           <li>
-            <img src="Anh/header/supermarket.png">
-            <a class="txtTT">Trang chủ</a>
+            <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/header/home.png" />
+            <!-- <a class="txtTT">Trang chủ</a> -->
           </li>
           <li>
-            <img src="Anh/header/cosmetics.png">
-            <a class="txtDM">Danh mục sản phẩm</a>
+            <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/header/category.png" />
+            <!-- <a class="txtDM">Danh mục</a> -->
           </li>
           <li>
-            <img src="Anh/header/user.png">
-            <a class="txtDN">Đăng nhập</a>
+            <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/header/user.png" />
+            <!-- <a class="txtDN">Đăng nhập</a> -->
           </li>
           <li>
-            <img src="Anh/header/customer.png">
-            <a class="txtTrangcanhan">Trang cá nhân</a>
+            <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/header/bell.png" />
+            <!-- <a class="txtTB">Thông báo</a> -->
           </li>
           <li>
-            <img src="Anh/header/bell.png">
-            <a class="txtTB">Thông báo</a>
-          </li>
-          <li>
-            <img src="Anh/header/trolley.png">
-            <a class="txtGH">Giỏ hảng</a>
+            <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/header/shopping-cart.png" />
+            <!-- <a class="txtGH">Giỏ hàng</a> -->
           </li>
         </ul>
       </div>
@@ -65,22 +60,543 @@
   </header>
 
   <main>
-    
-    <!-- <div class="d2">
-      <div class="submenu">
-          <a href="" style="text-decoration:none;"><img src="Vanphongpham/images/menu-icon.png" alt="Sai đường dẫn" style="width: 34px;height: 24px;transform: translate(0px, 6px);padding-right: 10px;"><span style="color: white;">Sản phẩm</span><span><i class="fa-solid fa-caret-down" style="color: white;"></i></span></a>  
-          <ul class="u1">
-              <li style="width: 150px;"><a href=""> Bấm kim</a></li><li style="width: 150px"><a href="">Băng keo</a></li><li ><a href="">Bảng tên</a></li><li ><a href="">Bìa hồ sơ</a></li><li ><a href="">Bút bi</a></li>
-          </ul>                   
+    <div class="danhmuc">
+      <div class="danhmuc-container">
+        <div class="menuDM">
+          <nav class="menuDM-container">
+            <ul>
+              <li class="has-submenu">
+                <a class="has-submenu-txt" href="#">THỊT, CÁ, TRỨNG, HẢI SẢN</a>
+                <ul class="submenu">
+                  <li><a href="#">Thịt heo</a></li>
+                  <li><a href="#">Thịt bò</a></li>
+                  <li><a href="#">Thịt sơ chế, tẩm ướt</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a class="has-submenu-txt" href="#">RAU, CỦ, NẤM, TRÁI CÂY</a>
+                <ul class="submenu">
+                  <li><a href="#">Củ, quả</a></li>
+                  <li><a href="#">Nấm các loại </a></li>
+                  <li><a href="#">Rau, củ làm sẵn</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a class="has-submenu-txt" href="#">DẦU ĂN, NƯỚC CHẤM, GIA VỊ</a>
+                <ul class="submenu">
+                  <li><a href="#">Dầu ăn</a></li>
+                  <li><a href="#">Nước mắm</a></li>
+                  <li><a href="#">Nước tương</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a class="has-submenu-txt" href="#">KEM, THỰC PHẨM ĐÔNG MÁT</a>
+                <ul class="submenu">
+                  <li><a href="#">Kem cây, kem hộp</a></li>
+                  <li><a href="#">Bánh bao, bánh mì, pizza</a></li>
+                  <li><a href="#">Xúc xích, lạp xưởng tươi</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a class="has-submenu-txt" href="#">MÌ, MIẾN, CHÁO PHỞ</a>
+                <ul class="submenu">
+                  <li><a href="#">Dầu ăn</a></li>
+                  <li><a href="#">Nước mắm</a></li>
+                  <li><a href="#">Nước tương</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a class="has-submenu-txt" href="#">GẠO, BỘT, ĐỒ KHÔ</a>
+                <ul class="submenu">
+                  <li><a href="#">Dầu ăn</a></li>
+                  <li><a href="#">Nước mắm</a></li>
+                  <li><a href="#">Nước tương</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a class="has-submenu-txt" href="#">BIA, NƯỚC GIẢI KHÁT</a>
+                <ul class="submenu">
+                  <li><a href="#">Dầu ăn</a></li>
+                  <li><a href="#">Nước mắm</a></li>
+                  <li><a href="#">Nước tương</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a class="has-submenu-txt" href="#">SỮA CÁC LOẠI</a>
+                <ul class="submenu">
+                  <li><a href="#">Dầu ăn</a></li>
+                  <li><a href="#">Nước mắm</a></li>
+                  <li><a href="#">Nước tương</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a class="has-submenu-txt" href="#">BÁNH KẸO CÁC LOẠI</a>
+                <ul class="submenu">
+                  <li><a href="#">Dầu ăn</a></li>
+                  <li><a href="#">Nước mắm</a></li>
+                  <li><a href="#">Nước tương</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a class="has-submenu-txt" href="#">CHĂM SÓC CÁC NHÂN</a>
+                <ul class="submenu">
+                  <li><a href="#">Dầu ăn</a></li>
+                  <li><a href="#">Nước mắm</a></li>
+                  <li><a href="#">Nước tương</a></li>
+                </ul>
+              </li>
+              <li class="has-submenu">
+                <a class="has-submenu-txt" href="#">SẢN PHẨM MẸ VÀ BÉ</a>
+                <ul class="submenu">
+                  <li><a href="#">Dầu ăn</a></li>
+                  <li><a href="#">Nước mắm</a></li>
+                  <li><a href="#">Nước tương</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!--  Loại thịt -->
+        <div class="hienthidanhmuc">
+          <div>
+            <div class="menuDM-CT">
+              <h2>
+                Thịt heo
+              </h2>
+              <div class="loaiThit">
+                <div>
+                  <img src="Anh/loaithit/StockSnap_GI3XTVX4EQ.jpg">
+                  <p>Ba rọi</p>
+                </div>
+
+                <div>
+                  <img src="Anh/loaithit/StockSnap_GI3XTVX4EQ.jpg">
+                  <p>Sườn</p>
+                </div>
+
+                <div>
+                  <img src="Anh/loaithit/StockSnap_GI3XTVX4EQ.jpg">
+                  <p>Bắp, chân giò</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!--  Banner-->
+          <div class="banner">
+            <img src="Anh/thit-heo-3-khong-21112023163014.jpg">
+          </div>
+          <!--  Sản phẩm khuyến mại-->
+          <div class="danhmuc-body">
+            <h2>--- KHUYẾN MÃI SỐC ---</h2>
+            <div class="danhmuc-body-container">
+              <div class="danhmuc-CT">
+                <div class="danhmuc-CT-sp">
+                  <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                  <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                  <a>94.800 đ</a>
+                  <div class="danhmuc-CT-sale">
+                    <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                    <a class="danhmuc-CT-sale-txt2">-10%</a>
+                  </div>
+                  <button class="danhmuc-CT-sp-bt">
+                    Mua
+                  </button>
+                </div>
+
+                <div class="danhmuc-CT-sp">
+                  <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                  <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                  <a>94.800 đ</a>
+                  <div class="danhmuc-CT-sale">
+                    <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                    <a class="danhmuc-CT-sale-txt2">-10%</a>
+                  </div>
+                  <button class="danhmuc-CT-sp-bt">
+                    Mua
+                  </button>
+                </div>
+
+                <div class="danhmuc-CT-sp">
+                  <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                  <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                  <a>94.800 đ</a>
+                  <div class="danhmuc-CT-sale">
+                    <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                    <a class="danhmuc-CT-sale-txt2">-10%</a>
+                  </div>
+                  <button class="danhmuc-CT-sp-bt">
+                    Mua
+                  </button>
+                </div>
+
+                <div class="danhmuc-CT-sp">
+                  <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                  <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                  <a>94.800 đ</a>
+                  <div class="danhmuc-CT-sale">
+                    <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                    <a class="danhmuc-CT-sale-txt2">-10%</a>
+                  </div>
+                  <button class="danhmuc-CT-sp-bt">
+                    Mua
+                  </button>
+                </div>
+
+                <div class="danhmuc-CT-sp">
+                  <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                  <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                  <a>94.800 đ</a>
+                  <div class="danhmuc-CT-sale">
+                    <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                    <a class="danhmuc-CT-sale-txt2">-10%</a>
+                  </div>
+                  <button class="danhmuc-CT-sp-bt">
+                    Mua
+                  </button>
+                </div>
+
+                <div class="danhmuc-CT-sp">
+                  <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                  <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                  <a>94.800 đ</a>
+                  <div class="danhmuc-CT-sale">
+                    <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                    <a class="danhmuc-CT-sale-txt2">-10%</a>
+                  </div>
+                  <button class="danhmuc-CT-sp-bt">
+                    Mua
+                  </button>
+                </div>
+
+                <div class="danhmuc-CT-sp">
+                  <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                  <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                  <a>94.800 đ</a>
+                  <div class="danhmuc-CT-sale">
+                    <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                    <a class="danhmuc-CT-sale-txt2">-10%</a>
+                  </div>
+                  <button class="danhmuc-CT-sp-bt">
+                    Mua
+                  </button>
+                </div>
+
+                <div class="danhmuc-CT-sp">
+                  <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                  <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                  <a>94.800 đ</a>
+                  <div class="danhmuc-CT-sale">
+                    <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                    <a class="danhmuc-CT-sale-txt2">-10%</a>
+                  </div>
+                  <button class="danhmuc-CT-sp-bt">
+                    Mua
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="danhmuc-sp">
+            <div class="danhmuc-sp-container">
+              <div class="danhmuc-body-container">
+                <div class="danhmuc-CT">
+                  <div class="danhmuc-CT-sp">
+                    <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                    <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                    <a>94.800 đ</a>
+                    <div class="danhmuc-CT-sale">
+                      <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                      <a class="danhmuc-CT-sale-txt2">-10%</a>
+                    </div>
+                    <button class="danhmuc-CT-sp-bt">
+                      Mua
+                    </button>
+                  </div>
+
+                  <div class="danhmuc-CT-sp">
+                    <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                    <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                    <a>94.800 đ</a>
+                    <div class="danhmuc-CT-sale">
+                      <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                      <a class="danhmuc-CT-sale-txt2">-10%</a>
+                    </div>
+                    <button class="danhmuc-CT-sp-bt">
+                      Mua
+                    </button>
+                  </div>
+
+                  <div class="danhmuc-CT-sp">
+                    <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                    <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                    <a>94.800 đ</a>
+                    <div class="danhmuc-CT-sale">
+                      <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                      <a class="danhmuc-CT-sale-txt2">-10%</a>
+                    </div>
+                    <button class="danhmuc-CT-sp-bt">
+                      Mua
+                    </button>
+                  </div>
+
+                  <div class="danhmuc-CT-sp">
+                    <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                    <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                    <a>94.800 đ</a>
+                    <div class="danhmuc-CT-sale">
+                      <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                      <a class="danhmuc-CT-sale-txt2">-10%</a>
+                    </div>
+                    <button class="danhmuc-CT-sp-bt">
+                      Mua
+                    </button>
+                  </div>
+
+                  <div class="danhmuc-CT-sp">
+                    <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                    <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                    <a>94.800 đ</a>
+                    <div class="danhmuc-CT-sale">
+                      <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                      <a class="danhmuc-CT-sale-txt2">-10%</a>
+                    </div>
+                    <button class="danhmuc-CT-sp-bt">
+                      Mua
+                    </button>
+                  </div>
+
+                  <div class="danhmuc-CT-sp">
+                    <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                    <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                    <a>94.800 đ</a>
+                    <div class="danhmuc-CT-sale">
+                      <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                      <a class="danhmuc-CT-sale-txt2">-10%</a>
+                    </div>
+                    <button class="danhmuc-CT-sp-bt">
+                      Mua
+                    </button>
+                  </div>
+
+                  <div class="danhmuc-CT-sp">
+                    <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                    <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                    <a>94.800 đ</a>
+                    <div class="danhmuc-CT-sale">
+                      <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                      <a class="danhmuc-CT-sale-txt2">-10%</a>
+                    </div>
+                    <button class="danhmuc-CT-sp-bt">
+                      Mua
+                    </button>
+                  </div>
+                  <div class="danhmuc-CT-sp">
+                    <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                    <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                    <a>94.800 đ</a>
+                    <div class="danhmuc-CT-sale">
+                      <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                      <a class="danhmuc-CT-sale-txt2">-10%</a>
+                    </div>
+                    <button class="danhmuc-CT-sp-bt">
+                      Mua
+                    </button>
+                  </div>
+                  <div class="danhmuc-CT-sp">
+                    <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                    <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                    <a>94.800 đ</a>
+                    <div class="danhmuc-CT-sale">
+                      <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                      <a class="danhmuc-CT-sale-txt2">-10%</a>
+                    </div>
+                    <button class="danhmuc-CT-sp-bt">
+                      Mua
+                    </button>
+                  </div>
+                  <div class="danhmuc-CT-sp">
+                    <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                    <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                    <a>94.800 đ</a>
+                    <div class="danhmuc-CT-sale">
+                      <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                      <a class="danhmuc-CT-sale-txt2">-10%</a>
+                    </div>
+                    <button class="danhmuc-CT-sp-bt">
+                      Mua
+                    </button>
+                  </div>
+                  <div class="danhmuc-CT-sp">
+                    <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                    <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                    <a>94.800 đ</a>
+                    <div class="danhmuc-CT-sale">
+                      <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                      <a class="danhmuc-CT-sale-txt2">-10%</a>
+                    </div>
+                    <button class="danhmuc-CT-sp-bt">
+                      Mua
+                    </button>
+                  </div>
+                  <div class="danhmuc-CT-sp">
+                    <img src="Anh/loaithit/nac-dam-heo-nhap-khau-dong-lanh-500g-202311271127579672.jpg">
+                    <p>Nạc dăm heo nhập khẩu 500g & hạt nêm nấm hương Maggi 450g</p>
+                    <a>94.800 đ</a>
+                    <div class="danhmuc-CT-sale">
+                      <a class="danhmuc-CT-sale-txt1">105.500 đ</a>
+                      <a class="danhmuc-CT-sale-txt2">-10%</a>
+                    </div>
+                    <button class="danhmuc-CT-sp-bt">
+                      Mua
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="danhmuc-TT">
+            <h2>THÔNG TIN </h2>
+            <div>
+              <div class="danhmuc-TT-txt">
+                <a>Thịt heo là gì ?</a>
+                <p>
+                  &#8226; Thịt heo là loại thực phẩm phổ biến nhất tại Việt Nam, là loại nguyên liệu quen thuộc trong
+                  những bữa
+                  ăn hằng ngày. Bởi lẽ, giá thịt heo không chỉ phù hợp với điều kiện kinh tế của người Việt mà còn dễ
+                  dàng chế biến ra nhiều món ăn nhanh mà lại không tốn quá nhiều thời gian.
+                  <br>
+                  &#8226; Thịt heo tươi chứa rất nhiều chất dinh dưỡng cung cấp cho cơ thể con người. Thông thường, phần
+                  thịt mà
+                  được ưa chuộng nhất chính là ba rọi và sườn heo. Các phần thịt này có độ mềm dai vừa phải, phần mỡ nạc
+                  xen kẽ tạo nên độ thơm ngon cho món ăn.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="danhmuc-TT-txt">
+                <a>Thành phần dinh dưỡng của thịt heo</a>
+                <p>
+                  &#8226; Nhìn chung, thịt heo mang đến giá trị dinh dưỡng cao với các hoạt chất thiết yếu cho cơ thể
+                  như chất
+                  béo, chất đạm, các vitamin và muối khoáng tốt. Tuy nhiên, các phần thịt heo tươi khác nhau sẽ chứa hàm
+                  lượng dinh dưỡng các chất khác nhau
+                  <br>
+                  &#8226; Thịt heo nạc: 19g protein, 7g mỡ, 7mg canxi, 190mg photpho, 1.5mg sắt, 2.5mg kẽm, 341mg kali,
+                  76mg
+                  natri, 2μg vitamin A.
+                  <br>
+                  &#8226; Thịt heo mỡ: 14.5g protein, 37.3g mỡ, 8mg canxi, 156mg photpho, 0.4mg sắt, 1.59mg kẽm, 318mg
+                  kali,
+                  43mg natri, 2μg vitamin A.
+                  <br>
+                  &#8226; Thịt nửa nạc nửa mỡ: 16.5g protein, 21.5g mỡ, 9mg canxi, 178mg photpho, 1.5mg sắt, 1.91mg kẽm,
+                  285mg
+                  kali, 55mg natri, 10μg vitamin A.
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="danhmuc-TT-txt">
+                <a>Lợi ích của thịt heo cho sức khỏe</a>
+                <p>
+                  &#8226; Bổ sung năng lượng cho cơ thể
+                  <br>
+                  &#8226; Phát triển và duy trì cơ bắp
+                  <br>
+                  &#8226; Tăng cường hệ miễn dịch và trí não
+                  <br>
+                  &#8226; Ngăn ngừa thiếu máu
+                  <br>
+                  &#8226; Bổ sung collagen giúp da dẻ mịn màng và khỏe mạnh
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="danhmuc-TT-txt">
+                <a>Các loại thịt heo</a>
+                <p>
+                  &#8226; Sườn
+                  <br>
+                  &#8226; Bắp, chân giò
+                  <br>
+                  &#8226; Xương
+                  <br>
+                  &#8226; Khác (Nạc vai, thăn,...)
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="danhmuc-TT-txt">
+                <a>Các món ăn ngon với thịt heo</a>
+                <p>
+                  &#8226; Trong nền ẩm thực Việt Nam, thịt heo được chế biến thành nhiều đồ ăn ngon, thích hợp cho các
+                  bữa ăn
+                  gia đình cũng như các dịp lễ, đám tiệc.
+                  <br>
+                  &#8226; Thịt heo chiên nước mắm kiểu Thái
+                  <br>
+                  &#8226; Thịt heo sốt cà
+                  <br>
+                  &#8226; Thịt chiên sả ớt
+                  <br>
+                  &#8226; Giò heo hầm nấm đông cô
+                  <br>
+                  &#8226; Thịt heo quay giòn bì
+                  <br>
+                  &#8226; Thịt heo ngâm nước mắm
+                  <br>
+                  &#8226; Thịt heo kho,...
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <div class="danhmuc-TT-txt">
+                <a>Cách bảo quản, lưu ý khi sử dụng thịt heo</a>
+                <p>
+                  &#8226; Thịt heo cần rửa sạch, để ráo rồi cho vào hộp đóng kín, bao ni lông, túi hút chân không hoặc
+                  quấn màng
+                  bọc thực phẩm rồi đặt vào tủ lạnh trữ đông
+                  <br>
+                  &#8226; Ngoài ra, bạn cũng có thể đem thịt heo đã rửa sạch, để ráo nước rồi tẩm ướp bằng các gia vị
+                  như
+                  muối,
+                  mật ong, rượu,...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div style="position: relative;text-align:center;max-width: 700px;"><input type="text" placeholder="Nhập tên sản phẩm cần tìm" style="width: 600px;height: 40px;margin-top: 20px;"><button style="width:40px;height:40px;position:absolute;margin-top: 20px;"><i class="fa-solid fa-magnifying-glass" ></i></button></div>
-      <div style="margin-top: 25px;"><a href=""><i class="fa-solid fa-cart-shopping" style="color: white;"></i></a></div>
-    </div> -->
-
-      
-    
-    
-
+    </div>
   </main>
+  <footer>
+    <div class="footer-container">
+      <div class="tt-Admin">
+        <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/footer/WebsiteTemplateIcon.png">
+        <div class="tt-Admin-txt">
+          <p>Nguyễn Công Nam</p>
+          <p>Trường Đại Học Sư Phạm Kỹ Thuật Hưng Yên</p>
+          <p>Giảng viên hướng dẫn : THs.TRần Đỗ Thu Hà</p>
+        </div>
+      </div>
+
+      <div class="tt-bachhoaxanh">
+        <p>Website được dựa trên website bách hóa xanh</p>
+        <p>Bán hàng 7:00 - 21:30 &#9997; 1900 1908</p>
+        <p>Khiếu nại 7:30 - 21:00 &#9997; 1800 1067</p>
+      </div>
+      <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/footer/logo-bach-hoa-xanh.jpg">
+    </div>
+  </footer>
 </body>
+<script src="Danhmuc.js"></script>
+
 </html>

@@ -1,20 +1,209 @@
 *{
   font-family: 'Playpen Sans', cursive;
-  font-family: 'Roboto', sans-serif;
 }
-/* .d2 >.submenu>a{ 
-  position: relative;
 
+.danhmuc{
+  width: 100%;
 }
-.d2 >.submenu> .u1{
-  position: absolute;
+
+.danhmuc-container{
+  width: 100%;
+  display: flex;
+  
+}
+
+.has-submenu{
+  border       : 1px solid #ccc;
+  margin-bottom: 2px;
+}
+
+.has-submenu a{
+  font-size: 20px;
+}
+
+.menuDM{
+  position: fixed;
+  left: 0;
+}
+
+.menuDM-container {
+  width: 15em;
+  margin-right: 9em;
+  
+}
+
+.menuDM ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menuDM-container ul li {
+  position: relative;
+  width: 20em;
+}
+
+.menuDM-container ul li .has-submenu-txt {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  width: 100%;
+}
+
+.menuDM-container .submenu {
   display: none;
-  top: 125px;
-  left: 250px;
-  padding-left: 0px;}
-.d2 >.submenu:hover .u1 { display: block;} */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #f5f4f1;
+  z-index: 1;
+  width: 100%;
+}
+
+.menuDM-container .has-submenu.active > .submenu {
+  display: block;
+}
+
+.submenu li {
+  border: 1px solid #ccc;
+  padding: 10px;
+  
+}
+.submenu li a{
+  
+  text-decoration: none;
+  width: 100%;
+  color: #333;
+}
+
+.menuDM-CT div{
+  margin-right: 20px;
+}
 
 
 
+.hienthidanhmuc{
+  width: 100%;
+}
 
+
+.menuDM-CT h2{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+}
+.loaiThit{
+  margin-top: 20px;
+  display: flex;
+}
+
+.loaiThit img{
+  height: 100px;
+  width: 100%;
+  border-radius: 10px;
+}
+.loaiThit p {
+  text-align: center;
+}
+
+.banner{
+  width: 100%;
+  margin-top: 20px;
+}
+
+.banner img{
+  border-radius: 5px;
+  width: 100%;
+}
+
+.danhmuc-body{
+  width: 100%;
+  margin-top: 40px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+.danhmuc-body h2{
+  text-align: center;
+  color: #03a63c;
+  margin-top: 5px;
+  padding: 20px;
+}
+
+.danhmuc-CT{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+}
+.danhmuc-CT div img{
+  height: 15em;
+  width: auto;
+  
+}
+
+.danhmuc-CT-sp{
+  width: 240px;
+  margin : 10px;
+  margin-bottom: 20px;
+}
+.danhmuc-CT-sp p{
+  margin-bottom: 10px;
+}
+.danhmuc-CT-sale{
+  margin-top: 10px;
+  width: 100%;
+}
+.danhmuc-CT-sale-txt1{
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+.danhmuc-CT-sale-txt2{
+  color: white;
+  padding: 5px;
+  background-color: red;
+}
+.danhmuc-CT-sp-bt{
+  margin-top: 20px;
+  width: 100%;
+  height: 3em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #03a63c;
+  cursor: pointer;
+  font-size: 17px;
+}
+.danhmuc-CT-sp-bt:hover{
+  border: 1px solid #03a63c;
+}
+.danhmuc-sp{
+  width: 100%;
+}
+
+
+.danhmuc-TT{
+  width: 100%;
+  margin-top: 20px;
+}
+.danhmuc-TT h2{
+  text-align: center;
+  color: #03a63c;
+}
+.danhmuc-TT-txt{
+  margin-top: 20px;
+
+}
+.danhmuc-TT-txt a {
+  font-size: 25px;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.danhmuc-TT-txt p{
+  margin-top: 20px;
+  padding: 10px 0px;
+  line-height: 1.6;
+  font-size: 20px;
+}

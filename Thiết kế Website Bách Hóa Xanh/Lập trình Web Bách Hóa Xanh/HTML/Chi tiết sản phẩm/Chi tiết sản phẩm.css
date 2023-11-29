@@ -1,7 +1,8 @@
-*{
+* {
   font-family: 'Playpen Sans', cursive;
   font-family: 'Roboto', sans-serif;
 }
+
 .CTSP {
   width     : 100%;
   margin-top: 50px;
@@ -21,14 +22,14 @@
 
 .CTSP-txt {
   width: 100%;
-  
+
 }
 
 .CTSP-name a {
   font-size  : 25px;
   font-weight: bold;
   color      : rgba(0, 0, 0, 0.8);
-  
+
 }
 
 .CTSP-DG {
@@ -190,36 +191,40 @@
 
 .CTSP-TT-container p {
   padding: 10px 0px;
-  
+  line-height: 1.5;
 }
-.CTSP-TT-txt h2{
+
+.CTSP-TT-txt h2 {
   margin-bottom: 20px;
-  margin-top: 20px;
-  border: 1px solid #cccccc;
-  padding: 10px;
+  margin-top   : 20px;
+  border       : 1px solid #cccccc;
+  padding      : 10px;
   border-radius: 10px;
 }
 
-.rating-container{
+.rating-container {
   position: relative;
 }
-.rating-container h2{
-  margin-top: 20px;
+
+.rating-container h2 {
+  margin-top   : 20px;
   border-radius: 10px;
-  border: 1px solid #cccccc;
-  padding: 10px;
+  border       : 1px solid #cccccc;
+  padding      : 10px;
 }
-.rating-container p{
-  position: absolute;
-  left: 50%;
+
+.rating-container p {
+  position : absolute;
+  left     : 50%;
   transform: translate(-50%, -50%);
 }
+
 .rating {
-  display: flex;
-  flex-direction: row-reverse;
+  display        : flex;
+  flex-direction : row-reverse;
   justify-content: center;
-  align-items: center;
-  font-size: 40px;
+  align-items    : center;
+  font-size      : 40px;
 }
 
 .rating input {
@@ -227,16 +232,17 @@
 }
 
 .rating label {
-  cursor: pointer;
-  color: gray;
+  cursor       : pointer;
+  color        : gray;
   margin-bottom: 20px;
 }
 
 .rating label:hover,
-.rating label:hover ~ label,
-.rating input:checked ~ label {
+.rating label:hover~label,
+.rating input:checked~label {
   color: gold;
 }
+
 .btFeedback {
   width           : 200px;
   height          : 50px;
@@ -247,8 +253,9 @@
   display         : flex;
   align-items     : center;
   justify-content : center;
-  margin          : 30px auto; /* căn giữa theo chiều ngang */
-  
+  margin          : 30px auto;
+  /* căn giữa theo chiều ngang */
+
 }
 
 
@@ -263,11 +270,11 @@
 }
 
 .comment-section {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
+  width        : 100%;
+  max-width    : 800px;
+  margin       : 0 auto;
+  padding      : 20px;
+  border       : 1px solid #ccc;
   border-radius: 10px;
 }
 
@@ -276,16 +283,16 @@
 }
 
 .user-info {
-  display: flex;
-  align-items: center;
+  display      : flex;
+  align-items  : center;
   margin-bottom: 10px;
 }
 
 .user-info img {
-  width: 40px;
-  height: 40px;
+  width        : 40px;
+  height       : 40px;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right : 10px;
 }
 
 .username {
@@ -296,3 +303,46 @@
   margin: 0;
 }
 
+footer {
+  width: 100%;
+}
+
+.footer-container {
+  max-width      : 1200px;
+  width          : 100%;
+  margin         : 0 auto;
+  display        : flex;
+  justify-content: space-between;
+}
+
+.footer-container img {
+  width        : 500px;
+  height       : 200px;
+  border-radius: 10px;
+}
+
+.tt-Admin {
+  display    : flex;
+  align-items: center;
+}
+
+.tt-Admin img {
+  height       : 200px;
+  width        : 200px;
+  border-radius: 10px;
+}
+
+.tt-Admin p {
+  margin-bottom: 10px;
+}
+
+.tt-bachhoaxanh {
+  margin-left: 50px;
+
+}
+
+.tt-bachhoaxanh p {
+  margin    : 20px 20px;
+  text-align: center;
+
+}

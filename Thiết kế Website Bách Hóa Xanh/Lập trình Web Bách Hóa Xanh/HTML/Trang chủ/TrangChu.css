@@ -6,11 +6,11 @@
 }
 
 body {
-  min-width: 1200px;
+  min-width : 1200px;
   background: #e9edf0;
   overflow-y: scroll;
-  margin: 0; 
-  padding: 0; 
+  margin    : 0;
+  padding   : 0;
 }
 
 header {
@@ -23,7 +23,6 @@ header {
   width           : 100%;
   top             : 0;
   z-index         : 999;
-  /* Đảm bảo header hiển thị trên cùng */
 }
 
 .menuHead {
@@ -61,30 +60,29 @@ header {
   height   : 20px;
 }
 
-ul {
+.menuHead ul {
   list-style : none;
   display    : flex;
   align-items: center;
 }
 
-li {
+.menuHead li {
   margin: 0 10px;
 }
 
-li a {
+.menuHead li a {
   color          : #ffffff;
   text-decoration: none;
 }
 
-ul li img {
+.menuHead ul li img {
   max-width   : 20px;
   height      : auto;
   margin-right: 5px;
-  transition: all 0.3s ease;
+  transition  : all 0.3s ease;
 }
 
-ul li img:hover {
-  border-radius   : 5px;
+.menuHead ul li img:hover {
   transform: scale(1.5);
 }
 
@@ -182,18 +180,19 @@ main {
 }
 
 .sectionProduct picture {
-  width      : 100px;
-  height     : 100px;
-  display    : flex;
-  overflow   : hidden;
-  text-align : center;
-  padding-top: 0;
+  width        : 100px;
+  height       : 100px;
+  display      : flex;
+  overflow     : hidden;
+  text-align   : center;
+  padding-top  : 0;
   border-radius: 10px;
 }
 
 picture img {
   width: 100%;
 }
+
 .sectionProduct picture:hover {
   transform : scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -227,14 +226,14 @@ picture img {
   height     : auto;
   display    : grid;
   place-items: center;
-  
+
 }
 
 .sectionSanpham {
-  width        : auto;
-  display      : flex;
-  flex-wrap    : wrap;
-  cursor       : pointer;
+  width    : auto;
+  display  : flex;
+  flex-wrap: wrap;
+  cursor   : pointer;
 }
 
 
@@ -245,12 +244,12 @@ picture img {
   width      : 200px;
   height     : 300px;
   margin     : 20px;
-  transition: transform 0.3s ease;
+  transition : transform 0.3s ease;
 }
 
 .Sanpham-tpye img {
   width: 100%;
-  
+
 }
 
 
@@ -270,7 +269,7 @@ picture img {
 
 }
 
-.Sanpham-tpye:hover{
+.Sanpham-tpye:hover {
   transform: scale(1.1);
 }
 
@@ -373,10 +372,10 @@ picture img {
   background-color: #c3ffcc;
   width           : 100%;
   cursor          : pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  border-radius   : 5px;
 }
 
 .More p {
@@ -384,12 +383,12 @@ picture img {
   color     : #454d66;
   text-align: center;
   padding   : 8px;
-  
+
 }
 
 
-.More img{
-  width: 30px;
+.More img {
+  width : 30px;
   height: 30px;
 }
 
@@ -474,7 +473,7 @@ picture img {
   width  : 100%;
 }
 
-.Meo-video iframe{
+.Meo-video iframe {
   border-radius: 10px;
 }
 
@@ -516,12 +515,12 @@ picture img {
 }
 
 footer {
-  min-width: 1200px;
-  width: 100%;
-  margin-top: 30px;
+  min-width    : 1200px;
+  width        : 100%;
+  margin-top   : 30px;
   margin-bottom: 20px;
-  clear: both;
-  
+  clear        : both;
+
 }
 
 
@@ -566,16 +565,16 @@ footer {
 }
 
 .footer-container {
-  max-width: 1200px; 
-  width: 100%; 
-  margin: 0 auto; 
-  display: flex; 
-  justify-content: space-between; 
+  max-width      : 1200px;
+  width          : 100%;
+  margin         : 0 auto;
+  display        : flex;
+  justify-content: space-between;
 }
 
 .footer-container img {
-  width : 500px;
-  height: 200px;
+  width        : 500px;
+  height       : 200px;
   border-radius: 10px;
 }
 
@@ -585,8 +584,8 @@ footer {
 }
 
 .tt-Admin img {
-  height: 200px;
-  width : 200px;
+  height       : 200px;
+  width        : 200px;
   border-radius: 10px;
 }
 
