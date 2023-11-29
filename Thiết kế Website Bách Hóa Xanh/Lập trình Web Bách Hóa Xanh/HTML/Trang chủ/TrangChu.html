@@ -1,85 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  
-  <title>Đồ án 2 - Bách hóa xanh</title>
+  <meta charset="UTF-8">
+  <title>Bach Hoa Xanh</title>
   <link rel="stylesheet" href="TrangChu.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body>
-
   <header>
     <nav>
-      <div class="menu">
+      <div class="menuHead">
         <div class="logo">
-          
           <a>Bách hóa xanh</a>
         </div>
         <div class="search-text">
-          <input type="search" name="Tìm kiếm" placeholder="Tìm kiếm của bạn ...">
-          <img class="icon-search" src="Anh/Icon/search.png">
+          <input type="search" name="Tìm kiếm" placeholder="Tìm kiếm của bạn ..." />
+          <img class="icon-search" src="Anh/header/search-interface-symbol.png" />
         </div>
-
         <ul>
           <li>
-            <img src="Anh/header/supermarket.png">
-            <a class="txtTT">Trang chủ</a>
+            <img src="Anh/header/home.png" />
+            <!-- <a class="txtTT">Trang chủ</a> -->
           </li>
           <li>
-            <img src="Anh/header/cosmetics.png">
-            <a class="txtDM">Danh mục</a>
+            <img src="Anh/header/category.png" />
+            <!-- <a class="txtDM">Danh mục</a> -->
           </li>
           <li>
-            <img src="Anh/header/customer.png">
-            <a class="txtDN">Đăng nhập</a>
+            <img src="Anh/header/user.png" />
+            <!-- <a class="txtDN">Đăng nhập</a> -->
           </li>
           <li>
-            <img src="Anh/header/user.png">
-            <a class="txtTrangcanhan">Cá nhân</a>
+            <img src="Anh/header/bell.png" />
+            <!-- <a class="txtTB">Thông báo</a> -->
           </li>
           <li>
-            <img src="Anh/header/bell.png">
-            <a class="txtTB">Thông báo</a>
-          </li>
-          <li>
-            <img src="Anh/header/trolley.png">
-            <a class="txtGH">Giỏ hảng</a>
+            <img src="Anh/header/shopping-cart.png" />
+            <!-- <a class="txtGH">Giỏ hàng</a> -->
           </li>
         </ul>
       </div>
     </nav>
   </header>
-  
   <main>
     <div class="slideshow-container">
       <div class="slide fade">
-        <img src="Slider/slider1.jpg" alt="Hình 1">
+        <img src="Slider/gio-qua-tet-2411202394433.jpg" alt="Hình 1"">
+      </div>
+      <div class=" slide fade ">
+        <img src=" Slider/bia-2711202313372.jpg" alt="Hình 2">
       </div>
       <div class="slide fade ">
-        <img src="Slider/slider2.jpg" alt="Hình 2">
+        <img src="Slider/cham-soc-ca-nhan-giam-den-50-1111202319183.jpeg" alt="Hình 3">
       </div>
       <div class="slide fade ">
-        <img src="Slider/slider3.jpg" alt="Hình 3">
-      </div>
-      <div class="slide fade ">
-        <img src="Slider/slider4.jpg" alt="Hình 3">
+        <img src="Slider/sua-cac-loai-10112023163314.jpg" alt="Hình 4">
       </div>
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-
-    <script src="TrangChu.js"></script>
-
+    <!-- Danh mục-->
     <div class="Danhmuc">
       <div class="txtDanhmuc">
-        <img src="Anh/Icon/categoryIcon.png">
+        <img src="Anh/header/category.png">
         <p>Danh mục</p>
       </div>
 
@@ -489,8 +479,9 @@
       </div>
 
       <div class="More">
+        <img src="Anh/Icon/more.png">
         <p>
-          &#8600; Xem thêm
+          Xem thêm
         </p>
       </div>
 
@@ -500,14 +491,14 @@
     <!-- Sản phẩm mới------------------------------------------------- -->
     <div class="Sanpham">
       <div class="txtSanpham">
-        <img src="Anh/Icon/shopping-bag.png">
+        <img src="Anh/Icon/product.png">
         <p>Sản phẩm mới</p>
       </div>
       <div class="containerSanpham">
         <section class="sectionSanpham">
           <div class="Sanpham-tpye">
             <picture>
-              <img src="Anh/SanPham/Sales/dau-thuc-vat-tuong-an.jpg">
+              <img src="Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/SanPham/Sales/dau-thuc-vat-tuong-an.jpg">
             </picture>
             <p>
               Dầu thực vật Tường An Cooking Oil can 5 lít
@@ -696,8 +687,9 @@
       </div>
 
       <div class="More">
+        <img src="Anh/Icon/more.png">
         <p>
-          &#8600; Xem thêm
+          Xem thêm
         </p>
       </div>
     </div>
@@ -705,7 +697,7 @@
     <!-- Sản phẩm mua nhiều------------------------------------------------- -->
     <div class="Sanpham">
       <div class="txtSanpham">
-        <img src="Anh/Icon/paper-bag.png">
+        <img src="Anh/Icon/products.png">
         <p>Sản phẩm mua nhiều</p>
       </div>
       <div class="containerSanpham">
@@ -901,8 +893,9 @@
       </div>
 
       <div class="More">
+        <img src="Anh/Icon/more.png">
         <p>
-          &#8600; Xem thêm
+          Xem thêm
         </p>
       </div>
     </div>
@@ -1150,15 +1143,16 @@
         </section>
       </div>
       <div class="More">
+        <img src="Anh/Icon/more.png">
         <p>
-          &#8600; Xem thêm
+          Xem thêm
         </p>
       </div>
     </div>
     <!--Rau củ nấm các loại-->
     <div class="Sanpham">
       <div class="txtSanpham">
-        <img src="Anh/Icon/fruit.png">
+        <img src="Anh/Icon/ice-cream-cup.png">
         <p>Kem, thực phẩm đông mát</p>
       </div>
       <div class="containerSanpham">
@@ -1348,18 +1342,19 @@
         </section>
       </div>
       <div class="More">
+        <img src="Anh/Icon/more.png">
         <p>
-          &#8600; Xem thêm
+          Xem thêm
         </p>
       </div>
     </div>
     <!--Rau củ nấm các loại-->
     <div class="Sanpham">
       <div class="txtSanpham">
-        <img src="Anh/Icon/fruit.png">
+        <img src="Anh/Icon/noodle.png"">
         <p>Mì, miến, cháo, phở</p>
       </div>
-      <div class="containerSanpham">
+      <div class=" containerSanpham">
         <section class="sectionSanpham">
           <div class="Sanpham-tpye">
             <picture>
@@ -1546,8 +1541,9 @@
         </section>
       </div>
       <div class="More">
+        <img src="Anh/Icon/more.png">
         <p>
-          &#8600; Xem thêm
+          Xem thêm
         </p>
       </div>
     </div>
@@ -1602,7 +1598,7 @@
         <div class="tt-Admin-txt">
           <p>Nguyễn Công Nam</p>
           <p>Trường Đại Học Sư Phạm Kỹ Thuật Hưng Yên</p>
-          <p>Giảng viên hướng dẫn : THs.TRần Đỗ Thu Hà</p>
+          <p>Giảng viên hướng dẫn : ThS. TRần Đỗ Thu Hà</p>
         </div>
       </div>
 
@@ -1616,4 +1612,5 @@
   </footer>
 </body>
 <script src="TrangChu.js"></script>
+
 </html>

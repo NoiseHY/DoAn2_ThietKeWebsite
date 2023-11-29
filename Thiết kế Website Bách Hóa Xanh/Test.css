@@ -220,7 +220,7 @@ picture img {
   height        : auto;
   display       : grid;
   place-items   : center;
-  padding-bottom: 20px;
+  
 }
 
 .sectionSanpham {
@@ -359,7 +359,6 @@ picture img {
 .More {
   background-color: #dad873;
   width           : 100%;
-  margin-top      : 30px;
   cursor          : pointer;
 }
 
