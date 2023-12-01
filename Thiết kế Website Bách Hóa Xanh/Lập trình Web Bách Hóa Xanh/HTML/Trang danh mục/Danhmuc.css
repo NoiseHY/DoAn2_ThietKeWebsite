@@ -22,8 +22,8 @@
 }
 
 .menuDM{
-  position: fixed;
   left: 0;
+  position: fixed;
 }
 
 .menuDM-container {
@@ -86,6 +86,7 @@
 
 .hienthidanhmuc{
   width: 100%;
+  margin-left: 200px;
 }
 
 
