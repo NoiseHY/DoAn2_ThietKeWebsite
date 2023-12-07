@@ -38,6 +38,7 @@ header {
   color          : #03a63c;
   text-decoration: none;
   margin-right   : auto;
+  cursor: pointer;
 }
 
 .search-text {
@@ -58,12 +59,14 @@ header {
 .icon-search {
   max-width: 20px;
   height   : 20px;
+  cursor: pointer;
 }
 
 .menuHead ul {
   list-style : none;
   display    : flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .menuHead li {
