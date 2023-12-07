@@ -1,117 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Bach Hoa Xanh</title>
-  <link rel="stylesheet" href="Test.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet">
-  
+    <title>AngularJS Example</title>
+    <script src="Angular JS/angular-1.8.2/angular.js"></script>
+    <script src="Test.js"></script>
 </head>
-
 <body>
-  <header>
-    <nav>
-      <div class="menuHead">
-        <div class="logo">
-          <a>Bách hóa xanh</a>
-        </div>
-        <div class="search-text">
-          <input type="search" name="Tìm kiếm" placeholder="Tìm kiếm của bạn ..." />
-          <img class="icon-search" src="Anh_Test/search-interface-symbol.png" />
-        </div>
-        <ul>
-          <li>
-            <img src="Anh_Test/home.png" />
-            <!-- <a class="txtTT">Trang chủ</a> -->
-          </li>
-          <li>
-            <img src="Anh_Test/category.png" />
-            <!-- <a class="txtDM">Danh mục</a> -->
-          </li>
-          <li>
-            <img src="Anh_Test/user.png" />
-            <!-- <a class="txtDN">Đăng nhập</a> -->
-          </li>
-          <li>
-            <img src="Anh_Test/bell.png" />
-            <!-- <a class="txtTB">Thông báo</a> -->
-          </li>
-          <li>
-            <img src="Anh_Test/shopping-cart.png" />
-            <!-- <a class="txtGH">Giỏ hàng</a> -->
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <!-- <div class="chart">
-      
-      <div class="bar" data-value="80"></div>
-      <div class="bar" data-value="60"></div>
-      <div class="bar" data-value="40"></div>
-      
-    </div> -->
-    <div class="chart">
-      <div class="chart-month">
-        <a>Tháng 12</a>
-        <div class="bar" data-value="50"></div>
-      </div>
-      <div class="chart-month">
-        <a>Tháng 11</a>
-        <div class="bar" data-value="70"></div>
-      </div>
-      <div class="chart-month">
-        <a>Tháng 10</a>
-        <div class="bar" data-value="90"></div>
-      </div>
-      <div class="chart-month">
-        <a>Tháng 9</a>
-        <div class="bar" data-value="110"></div>
-      </div>
-      <div class="chart-month">
-        <a>Tháng 8</a>
-        <div class="bar" data-value="200"></div>
-      </div>
-      <div class="chart-month">
-        <a>Tháng 7</a>
-        <div class="bar" data-value="260"></div>
-      </div>
-      <div class="chart-month">
-        <a>Tháng 6</a>
-        <div class="bar" data-value="98"></div>
-      </div>
-      <div class="chart-month">
-        <a>Tháng 5</a>
-        <div class="bar" data-value="40"></div>
-      </div>
-      <div class="chart-month">
-        <a>Tháng 4</a>
-        <div class="bar" data-value="50"></div>
-      </div>
-      <div class="chart-month">
-        <a>Tháng 3</a>
-        <div class="bar" data-value="80"></div>
-      </div>
-      <div class="chart-month">
-        <a>Tháng 2</a>
-        <div class="bar" data-value="60"></div>
-      </div>
-      <div class="chart-month">
-        <a>Tháng 1</a>
-        <div class="bar" data-value="40"></div>
-      </div>
-      
-    </div>
-    
-    
-    
-  </main>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+    <h1>{{ message }}</h1>
+    <ul>
+        <li ng-repeat="course in courses">{{ course }}</li>
+    </ul>
+</div>
+
 </body>
-<script src="Test.js"></script>
 </html>
