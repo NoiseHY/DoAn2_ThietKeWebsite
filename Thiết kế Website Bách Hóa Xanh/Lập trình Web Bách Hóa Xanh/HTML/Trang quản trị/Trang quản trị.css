@@ -153,6 +153,7 @@ main{
   border: 1px solid #ccc;
   cursor: pointer;
   color: black;
+  font-size: 13px;
 }
 .menuND-ql{
   width: 100%;
@@ -174,6 +175,8 @@ main{
   border: 1px solid white;
   cursor: pointer;
   color: black;
+  font-size: 13px;
+  text-align: center;
 }
 
 .menuND-nd img{
@@ -202,6 +205,18 @@ main{
 
 .admin-content{
   margin-left: 9em;
+}
+
+.div-line2{
+  border: 1px solid #cccbc8;
+  width: 30%;
+  margin-top: 10px;
+}
+
+.admin-content h2{
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 .admin-content-container-main{
   display: flex;

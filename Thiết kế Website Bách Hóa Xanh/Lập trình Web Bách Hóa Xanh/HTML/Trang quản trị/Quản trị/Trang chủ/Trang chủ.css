@@ -9,7 +9,7 @@
   display: flex;
 }
 .admin-content-container-tt{
-  padding: 40px;
+  padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-top: 10px;
@@ -21,38 +21,48 @@
   width: 40%;
 }
 
-
-
 .admin-content-container-tt a {
   font-weight: bold;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 .admin-content-container-tt p {
   margin-top: 10px;
-  font-size: 60px;
+  font-size: 30px;
   color: #f5f4f1;
 }
 .div-line{
   border-bottom: 1px solid #cccbc8;
   margin-top: 20px;
-  width: 40%;
+  width: 100%;
 }
 .admin-content-container-tn{
   margin-top: 10px;
 }
 
+.admin-content-container-tn h3{
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
 .admin-content-container-tn-kh{
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
+  
 }
 .admin-content-container-tn-kh img{
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #56d96a;
+  width: 40px;
+  height: 40px;
 }
 .admin-content-container-tn-kh-nd{
   margin-left: 10px;
   margin-right: 7.5em;
+  font-size: 16px;
 }
 .admin-content-container-tn-kh-nd p{
   margin-top: 6px;
@@ -98,8 +108,16 @@
 
 .admin-content-container-right-tt div > h3{
   margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
+.admin-content-container-right-tt div >img{
+  height: 40px;
+  width: 40px;
+  
+}
 
 .admin-content-container-right-img{
   width: 100%;
@@ -107,7 +125,7 @@
 }
 .admin-content-container-right-img img{
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
   border-radius: 5px;
   cursor: pointer;

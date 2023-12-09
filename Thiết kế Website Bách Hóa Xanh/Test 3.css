@@ -1,0 +1,18 @@
+.image-selector {
+  display: flex;
+  flex-wrap: wrap;
+}
+.image-selector img {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  cursor: pointer;
+}
+.displayed-image {
+  margin-top: 20px;
+  
+}
+.displayed-image img {
+  max-width: 300px;
+  max-height: 300px;
+}

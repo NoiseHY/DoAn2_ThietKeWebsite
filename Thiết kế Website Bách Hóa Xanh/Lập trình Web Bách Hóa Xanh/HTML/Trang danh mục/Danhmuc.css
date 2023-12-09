@@ -18,7 +18,7 @@
 }
 
 .has-submenu a{
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .menuDM{
@@ -40,12 +40,12 @@
 
 .menuDM-container ul li {
   position: relative;
-  width: 20em;
+  width: 15em;
 }
 
 .menuDM-container ul li .has-submenu-txt {
   display: block;
-  padding: 10px;
+  padding: 5px;
   text-decoration: none;
   color: #333;
   font-weight: bold;
@@ -93,7 +93,8 @@
 .menuDM-CT h2{
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
+  font-size: 16px;
 }
 .loaiThit{
   margin-top: 20px;
@@ -107,6 +108,7 @@
 }
 .loaiThit p {
   text-align: center;
+  font-size: 13px;
 }
 
 .banner{
@@ -130,16 +132,17 @@
   color: #03a63c;
   margin-top: 5px;
   padding: 20px;
+  font-size: 16px;
 }
 
 .danhmuc-CT{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 10px;
   justify-content: center;
 }
 .danhmuc-CT div img{
-  height: 15em;
+  height: 12em;
   width: auto;
   
 }
@@ -151,7 +154,12 @@
 }
 .danhmuc-CT-sp p{
   margin-bottom: 10px;
+  font-size: 13px;
 }
+.danhmuc-CT-sp a {
+  font-size: 13px;
+}
+
 .danhmuc-CT-sale{
   margin-top: 10px;
   width: 100%;
@@ -173,7 +181,7 @@
   border: 1px solid #ccc;
   color: #03a63c;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 13px;
 }
 .danhmuc-CT-sp-bt:hover{
   border: 1px solid #03a63c;
@@ -190,15 +198,16 @@
 .danhmuc-TT h2{
   text-align: center;
   color: #03a63c;
+  font-size: 16px;
 }
 .danhmuc-TT-txt{
   margin-top: 20px;
 
 }
 .danhmuc-TT-txt a {
-  font-size: 25px;
+  font-size: 16px;
   border: 1px solid #ccc;
-  padding: 15px;
+  padding: 10px;
   border-radius: 5px;
   font-weight: bold;
 }
@@ -206,5 +215,12 @@
   margin-top: 20px;
   padding: 10px 0px;
   line-height: 1.6;
-  font-size: 20px;
+  font-size: 16px;
+}
+
+.div-line{
+  border-bottom: 1px solid #cccbc8;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
 }

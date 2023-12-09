@@ -14,11 +14,62 @@
   width  : 100%;
 }
 
-.CTSP-img img {
+/* .CTSP-img img {
   width       : 350;
   height      : 350px;
   margin-right: 20px;
+} */
+
+.CTSP-img {
+  width: 100%;
 }
+
+.image-selector {
+  display     : flex;
+  /* flex-wrap: wrap; */
+  /* overflow    : hidden; */
+  width       : 100%;
+}
+
+.image-selector img {
+  width : 100px;
+  height: 100px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.image-selector-img{
+  display: flex;
+  width: 500px;
+  overflow: hidden;
+}
+
+.image-selector-img img.selected {
+  border: 2px solid #03a63c;
+}
+
+.displayed-image {
+  margin-top: 20px;
+
+}
+
+.displayed-image img {
+  max-width : 500px;
+  max-height: 500px;
+}
+
+.prev-img,
+.next-img {
+  color: white;
+  background-color: #ccc;
+  cursor          : pointer;
+  padding         : 4px;
+  display: flex;
+  align-items: center;
+}
+
+
+
 
 .CTSP-txt {
   width: 100%;
@@ -26,7 +77,7 @@
 }
 
 .CTSP-name a {
-  font-size  : 25px;
+  font-size  : 20px;
   font-weight: bold;
   color      : rgba(0, 0, 0, 0.8);
 
@@ -40,6 +91,7 @@
 .CTSP-DG p {
   margin-top: 15px;
   padding   : 10px;
+  font-size : 16px;
 }
 
 .CTSP-cost {
@@ -49,7 +101,7 @@
 }
 
 .CTSP-cost_GiaGoc {
-  font-size      : 20px;
+  font-size      : 16px;
   margin-right   : 10px;
   text-decoration: line-through;
 }
@@ -57,7 +109,7 @@
 .CTSP-cost a {
   color       : #ee4d2d;
   margin-right: 10px;
-  font-size   : 30px;
+  font-size   : 16px;
 }
 
 .CTSP-cost-GG {
@@ -73,6 +125,10 @@
   align-items: center;
 }
 
+.CTSP-GH p {
+  font-size: 16px;
+}
+
 .CTSP-GH-DD {
   margin-left: 30px;
 
@@ -85,6 +141,7 @@
 
 .CTSP-GH-DD-Freeship a {
   margin-left: 10px;
+  font-size  : 16px;
 }
 
 .CTSP-GH-DD-Go {
@@ -103,6 +160,7 @@
 .CTSP-GH-DD-Go-Ship p {
   margin-left  : 10px;
   margin-bottom: 10px;
+  font-size    : 16px;
 }
 
 .CTSP-SL {
@@ -149,10 +207,12 @@
   display         : flex;
   align-items     : center;
   justify-content : center;
+  border-radius   : 3px;
 }
 
 .btThemGH a {
-  color: #ee4d2d;
+  color    : #ee4d2d;
+  font-size: 16px;
 }
 
 .btThemGH img {
@@ -171,10 +231,12 @@
   display         : flex;
   align-items     : center;
   justify-content : center;
+  border-radius   : 3px;
 }
 
 .btMua a {
-  color: white;
+  color    : white;
+  font-size: 16px;
 }
 
 .btMua img {
@@ -190,16 +252,22 @@
 }
 
 .CTSP-TT-container p {
-  padding: 10px 0px;
+  padding    : 10px 0px;
   line-height: 1.5;
 }
 
 .CTSP-TT-txt h2 {
-  margin-bottom: 20px;
   margin-top   : 20px;
-  border       : 1px solid #cccccc;
   padding      : 10px;
   border-radius: 10px;
+  font-size    : 18px;
+
+}
+
+.div-line2 {
+  border: 1px solid #54E00C;
+  width : 20%;
+
 }
 
 .rating-container {
@@ -209,8 +277,9 @@
 .rating-container h2 {
   margin-top   : 20px;
   border-radius: 10px;
-  border       : 1px solid #cccccc;
-  padding      : 10px;
+
+  padding  : 10px;
+  font-size: 18px;
 }
 
 .rating-container p {
@@ -225,6 +294,7 @@
   justify-content: center;
   align-items    : center;
   font-size      : 40px;
+  margin-top     : 10px;
 }
 
 .rating input {
@@ -254,13 +324,14 @@
   align-items     : center;
   justify-content : center;
   margin          : 30px auto;
-  /* căn giữa theo chiều ngang */
+  border-radius   : 3px;
 
 }
 
 
 .btFeedback a {
-  color: #54E00C;
+  color    : #54E00C;
+  font-size: 16px;
 }
 
 .btFeedback img {
@@ -276,6 +347,7 @@
   padding      : 20px;
   border       : 1px solid #ccc;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .comment {
