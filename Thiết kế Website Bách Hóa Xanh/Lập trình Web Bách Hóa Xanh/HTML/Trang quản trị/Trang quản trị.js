@@ -1,11 +1,76 @@
-document.addEventListener('DOMContentLoaded', function() {
+var app = angular.module('myApp', ['ngRoute']);
 
-  console.log("kết nối thành công !");
-    
-  const chartMonths = document.querySelectorAll(".chart-month");
-  chartMonths.forEach(month => {
-    const value = month.querySelector(".bar").getAttribute("data-value");
-    const bar = month.querySelector(".bar");
-    bar.style.height = value + "px";
-  });
+
+app.config(function ($routeProvider) {
+  $routeProvider
+    .when('/quan-ly-khach-hang', {
+      templateUrl: 'Quản trị/Customer/Customer.html',
+      controller: 'QuanLyKhachHangController',
+      resolve: {
+        css: function() {
+
+          var head = document.getElementsByTagName('head')[0];
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = 'Quản trị/Customer/Customer.css'; 
+          head.appendChild(link);
+        }
+      }
+    })
+    .when('/', {
+      templateUrl: 'Quản trị/Trang chủ/Trang chủ.html', 
+      controller: 'QuanLyAdminController', 
+      resolve: {
+        css: function() {
+
+          var head = document.getElementsByTagName('head')[0];
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = 'Quản trị/Trang chủ/Trang chủ.css'; 
+          head.appendChild(link);
+        }
+      }
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
 });
+
+
+app.controller('AdminContentController', function ($scope) {
+  // Controller logic for chart view
+  $scope.chartMonths = [
+    { name: 'Tháng 1', value: 50 },
+    { name: 'Tháng 2', value: 70 },
+    { name: 'Tháng 3', value: 90 },
+    { name: 'Tháng 4', value: 100 },
+    { name: 'Tháng 5', value: 60 },
+    { name: 'Tháng 6', value: 120 },
+    { name: 'Tháng 7', value: 80 },
+    { name: 'Tháng 8', value: 87 },
+    { name: 'Tháng 9', value: 54 },
+    { name: 'Tháng 10', value: 50 },
+    { name: 'Tháng 11', value: 70 },
+    { name: 'Tháng 12', value: 90 },
+  ];
+});
+
+app.controller('QuanLyKhachHangController', function ($scope, $location) {
+  $scope.navigateToPageKH = function() {
+    console.log('Clicked navigateToPageKH');
+    $location.path('/quan-ly-khach-hang');
+  };
+});
+
+app.controller('QuanLyAdminController', function($scope, $location) {
+  $scope.navigateToAdmin = function() {
+    console.log('Clicked navigateToAdmin');
+    $location.path('/quan-ly-admin');
+  };
+});
+
+
+
+

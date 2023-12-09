@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
+
 <head>
-    <title>AngularJS Example</title>
-    <script src="Angular JS/angular-1.8.2/angular.js"></script>
-    <script src="Test.js"></script>
+  <title>Angular Route Example</title>
+  <script src="Angular JS/angular-1.8.2/angular.js"></script>
+  <script src="Angular JS/angular-1.8.2/angular-route.js"></script>
+  <script src="Test.js"></script>
 </head>
+
 <body>
+  <h1>AngularJS Route Example</h1>
+  <ul>
+    <li><a href="#/home">Home</a></li>
+    <li><a href="#/about">About</a></li>
+  </ul>
 
-<div ng-app="myApp" ng-controller="myCtrl">
-    <h1>{{ message }}</h1>
-    <ul>
-        <li ng-repeat="course in courses">{{ course }}</li>
-    </ul>
-</div>
-
+  <div ng-view></div>
 </body>
+
 </html>

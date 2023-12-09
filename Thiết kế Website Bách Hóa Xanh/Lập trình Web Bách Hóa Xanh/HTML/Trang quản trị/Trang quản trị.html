@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html >
 
 <head>
   <title>Trang người dùng</title>
@@ -11,15 +11,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400&display=swap" rel="stylesheet">
 
-
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap"
     rel="stylesheet">
+
+  <!-- <link href="Quản trị/Customer/Customer.html" >  -->
+  <script src="/Angular JS/angular-1.8.2/angular.min.js"></script>
+  <script src="/Angular JS/angular-1.8.2/angular-route.js"></script>
+  
+  <script src="Trang quản trị.js"></script>
 </head>
 
-<body>
+<body ng-app="myApp">
   <header>
     <nav>
       <div class="menuHead">
@@ -62,13 +68,13 @@
       <h1>Trang quản lý</h1>
       <!--  Chức năng-->
       <div class="menuND">
-        <div class="menuND-nd">
+        <div class="menuND-nd" ng-click="navigateToAdmin()" ng-controller="QuanLyAdminController">
           <img src="Anh/side-bar/user.png">
           Trang chủ
 
         </div>
         <div class="menuND-ql">
-          <div class="menuND-ql-txt">
+          <div class="menuND-ql-txt" >
             <img src="Anh/side-bar/manager.png">
             Quản lý
             <span class="more-icon">&#8942;</span>
@@ -79,11 +85,13 @@
             <div class="submenu-dropdown">
               <div class="submenu-ql-sp">Quản lý Sản phẩm</div>
               <div class="submenu-ql-dh">Quản lý Đơn hàng</div>
-              <div class="submenu-ql-kh">Quản lý Khách hàng</div>
+              
+              <div class="submenu-ql-kh" ng-click="navigateToPageKH()" ng-controller="QuanLyKhachHangController" >Quản lý Khách hàng</div>
+              
               <div class="submenu-ql-tt">Quản lý Thanh toán</div>
               <div class="submenu-ql-nd">Người dùng</div>
             </div>
-            
+
           </div>
 
         </div>
@@ -92,151 +100,21 @@
           <img src="Anh/side-bar/find.png">
           Tìm kiếm
 
-
         </div>
         <div class="menuND-thongke">
           <img src="Anh/side-bar/project-management.png">
           Thống kê
 
-
         </div>
       </div>
     </div>
+    <!-- ng-view -->
+    <div class="admin-content"   ng-view>
 
-    <div class="admin-content">
-      <div class="admin-content-container">
-        <h2>Cửa hàng bách hóa xanh </h2>
-        <div class="admin-content-container-main">
-          <div class="admin-content-container-left">
-            <div class="admin-content-container-tt">
-              <a>Tổng tiền </a>
-              <p>500.000 đ</p>
-            </div>
-    
-            <div class="div-line"></div>
-    
-            <div class="admin-content-container-tn ">
-              <h3>Thu nhập</h3> 
-              <div class="admin-content-container-tn-kh">
-                <img src="Anh/ndung/user.png">
-                <div class="admin-content-container-tn-kh-nd">
-                  <a>Nguyễn Công Nam</a>
-                  <p>10 phút trước </p>
-                </div>
-                <p>+ 100.000 đ</p>
-              </div>
-    
-              <div class="admin-content-container-tn-kh">
-                <img src="Anh/ndung/user.png">
-                <div class="admin-content-container-tn-kh-nd">
-                  <a>Nguyễn Công Nam</a>
-                  <p>10 phút trước </p>
-                </div>
-                <p>+ 100.000 đ</p>
-              </div>
-    
-              <div class="admin-content-container-tn-kh">
-                <img src="Anh/ndung/user.png">
-                <div class="admin-content-container-tn-kh-nd">
-                  <a>Nguyễn Công Nam</a>
-                  <p>10 phút trước </p>
-                </div>
-                <p>+ 100.000 đ</p>
-              </div>
-    
-              <div class="admin-content-container-tn-kh">
-                <img src="Anh/ndung/user.png">
-                <div class="admin-content-container-tn-kh-nd">
-                  <a>Nguyễn Công Nam</a>
-                  <p>10 phút trước </p>
-                </div>
-                <p>+ 100.000 đ</p>
-              </div>
-            </div>
-          </div>
-          <div class="admin-content-container-right">
-            <div class="admin-content-container-right-chart">
-              <div class="chart">
-                <div class="chart-month">
-                  <a>Tháng 1</a>
-                  <div class="bar" data-value="50"></div>
-                </div>
-                <div class="chart-month">
-                  <a>Tháng 2</a>
-                  <div class="bar" data-value="70"></div>
-                </div>
-                <div class="chart-month">
-                  <a>Tháng 3</a>
-                  <div class="bar" data-value="90"></div>
-                </div>
-                <div class="chart-month">
-                  <a>Tháng 4</a>
-                  <div class="bar" data-value="110"></div>
-                </div>
-                <div class="chart-month">
-                  <a>Tháng 5</a>
-                  <div class="bar" data-value="200"></div>
-                </div>
-                <div class="chart-month">
-                  <a>Tháng 6</a>
-                  <div class="bar" data-value="260"></div>
-                </div>
-                <div class="chart-month">
-                  <a>Tháng 7</a>
-                  <div class="bar" data-value="98"></div>
-                </div>
-                <div class="chart-month">
-                  <a>Tháng 8</a>
-                  <div class="bar" data-value="40"></div>
-                </div>
-                <div class="chart-month">
-                  <a>Tháng 9</a>
-                  <div class="bar" data-value="50"></div>
-                </div>
-                <div class="chart-month">
-                  <a>Tháng 10</a>
-                  <div class="bar" data-value="80"></div>
-                </div>
-                <div class="chart-month">
-                  <a>Tháng 11</a>
-                  <div class="bar" data-value="60"></div>
-                </div>
-                <div class="chart-month">
-                  <a>Tháng 12</a>
-                  <div class="bar" data-value="40"></div>
-                </div>
-                
-              </div>
-            </div>
-            
-            <div class="admin-content-container-right-tt">
-              <div>
-                <h3>Thu nhập </h3>
-                <p>6.630.000 đ</p>
-                
-              </div>
-              <div><img src="Anh/ndung/trend.png"></div>
-              
-              <div>
-                <h3>Chi tiêu</h3>
-                <p>1.540.000 đ</p>
-              </div>
-              <div><img src="Anh/ndung/down.png"></div>
-              
-            </div>
-
-            <div class = "admin-content-container-right-img">
-              <img src="Anh/ndung/OIG.jpg"> 
-            </div>
-          </div>
-        </div>
-        
-        
-      </div>
-        
     </div>
+    
   </main>
 </body>
-<script src="Trang quản trị.js"></script>
+
 
 </html>
