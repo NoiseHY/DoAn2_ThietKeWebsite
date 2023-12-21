@@ -18,8 +18,23 @@ app.config(function ($routeProvider) {
         }
       }
     })
+    .when('/quan-ly-san-pham', {
+      templateUrl: 'Quản trị/Product/Product.html',
+      controller: 'QuanLySanPhamController',
+      resolve: {
+        css: function() {
+
+          var head = document.getElementsByTagName('head')[0];
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          link.href = 'Quản trị/Product/Product.css'; 
+          head.appendChild(link);
+        }
+      }
+    })
     .when('/', {
-      templateUrl: 'Quản trị/Trang chủ/Trang chủ.html', 
+      templateUrl: 'Quản trị/Home/Home.html', 
       controller: 'QuanLyAdminController', 
       resolve: {
         css: function() {
@@ -28,7 +43,7 @@ app.config(function ($routeProvider) {
           var link = document.createElement('link');
           link.rel = 'stylesheet';
           link.type = 'text/css';
-          link.href = 'Quản trị/Trang chủ/Trang chủ.css'; 
+          link.href = 'Quản trị/Home/Home.css'; 
           head.appendChild(link);
         }
       }
@@ -55,6 +70,13 @@ app.controller('AdminContentController', function ($scope) {
     { name: 'Tháng 11', value: 70 },
     { name: 'Tháng 12', value: 90 },
   ];
+});
+
+app.controller('QuanLySanPhamController', function ($scope, $location) {
+  $scope.navigateToPageSP = function() {
+    console.log('Clicked navigateToPageSP');
+    $location.path('/quan-ly-san-pham');
+  };
 });
 
 app.controller('QuanLyKhachHangController', function ($scope, $location) {

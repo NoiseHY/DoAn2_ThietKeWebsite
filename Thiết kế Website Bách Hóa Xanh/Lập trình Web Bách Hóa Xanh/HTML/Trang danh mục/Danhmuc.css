@@ -21,6 +21,24 @@
   font-size: 16px;
 }
 
+.has-submenu:hover .submenu-dropdown{
+  display: block;
+}
+
+.submenu-dropdown{
+  display: none;
+  cursor: pointer;
+}
+
+.submenu-dropdown div{
+  padding: 15px;
+  border: 1px solid white;
+  cursor: pointer;
+  color: black;
+  font-size: 13px;
+  
+}
+
 .menuDM{
   left: 0;
   position: fixed;
