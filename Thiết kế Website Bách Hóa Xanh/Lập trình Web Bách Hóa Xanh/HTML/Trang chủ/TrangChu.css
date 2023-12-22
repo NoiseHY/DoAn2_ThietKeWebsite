@@ -245,16 +245,13 @@ picture img {
   cursor   : pointer;
 }
 
-
-
-
 .Sanpham-tpye {
   align-items: center;
   width      : 200px;
   height     : 200px;
   margin     : 20px;
   transition : transform 0.3s ease;
-  margin-bottom: 100px;
+  margin-bottom: 10em;
 }
 
 .Sanpham-tpye img {
@@ -262,6 +259,9 @@ picture img {
   width: 150px;
 }
 
+.Sanpham-tpye img:hover{
+  transform: scale(1.1);
+}
 
 .Sanpham-tpye p {
   color             : black;
@@ -273,15 +273,9 @@ picture img {
   /* Số dòng giới hạn */
   -webkit-box-orient: vertical;
   line-height       : 1.5;
-  /* Điều chỉnh line-height nếu cần thiết */
   max-height        : 4em;
-  /* Số dòng giới hạn * line-height */
-
 }
 
-.Sanpham-tpye:hover {
-  transform: scale(1.1);
-}
 
 .Sanpham-cost {
   display    : flex;
@@ -293,6 +287,12 @@ picture img {
   flex     : 1;
   color    : #ee4d2d;
   font-size: 16px;
+  
+}
+
+.Sanpham-cost-container{
+  display: flex;
+  width: 100%;
 }
 
 .Sanpham-cost-star {
@@ -312,16 +312,19 @@ picture img {
 
 .Sanpham-cost-sales {
   flex: 1;
+  width: 100%;
+  margin-right: 20px;
 }
 
 .Sanpham-cost-phantram {
   position: relative;
+  width: 100%;
 }
 
 .Sanpham-cost-phantram a {
   font-size: 16px;
   color    : rgb(248, 120, 5);
-
+  
 }
 
 .Sanpham-cost-phantram p {
@@ -329,16 +332,29 @@ picture img {
   border-radius   : 5px;
   color           : yellow;
   padding         : 3px 3px;
-  margin-top      : 40px;
+  margin-top: 50px;
 }
 
 .Sanpham-cost-phantram img {
   width : 20px;
   height: 20px;
-
+  margin-top: 6px;
 }
 
 
+.danhmuc-CT-sp-bt{
+  margin-top: 20px;
+  width: 100%;
+  height: 3em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #03a63c;
+  cursor: pointer;
+  font-size: 13px;
+}
+.danhmuc-CT-sp-bt:hover{
+  border: 1px solid #03a63c;
+}
 
 /* Định dạng ban đầu của phần tử p */
 .Sanpham-cost-phantram p {
@@ -431,6 +447,11 @@ picture img {
   right    : 0;
   font-size: 16px;
   color    : #454d66;
+  cursor: pointer;
+}
+
+.Voucher a:hover{
+  color: #03a63c;
 }
 
 .Voucher-container {
@@ -472,10 +493,16 @@ picture img {
   width           : 90px;
   height          : 40px;
   margin-left     : 20px;
-  background-color: #7EA1C4;
-  color           : #1B365C;
-  border          : none;
+  background-color: white;
+  color           : #7EA1C4;
+  border          : 5px;
   cursor          : pointer;
+  border: 1px solid #7EA1C4;
+}
+
+.get-Voucher button:hover{
+  background-color: #7EA1C4;
+  color: white;
 }
 
 .Meo {
@@ -519,6 +546,7 @@ picture img {
 .Meo-txt-a p {
   margin-left: 10px;
   font-size: 14px;
+  width: 200px;
 }
 
 .Meo-txt .More p {
