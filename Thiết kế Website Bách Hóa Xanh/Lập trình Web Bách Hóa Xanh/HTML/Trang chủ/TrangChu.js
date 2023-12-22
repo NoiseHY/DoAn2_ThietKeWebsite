@@ -142,12 +142,16 @@ let slideIndex = 1;
     const productName = document.getElementById('product-name').textContent;
     const productPrice = document.getElementById('product-price').textContent;
     const productSales = document.getElementById('product-sales').textContent;
-  
+    const productStars = document.getElementById('product-stars').textContent;
+    const productPt = document.getElementById('product-pt').textContent;
+
     const productData = {
       img: productImg,
       name: productName,
       price: productPrice,
-      sales: productSales
+      sales: productSales,
+      stars : productStars,
+      pt : productPt
     };
   
     const existingProductData = JSON.parse(localStorage.getItem('selectedProduct'));

@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const selectedImageSrc = clickedImage.getAttribute('src');
       displayImage(selectedImageSrc);
     });
-    });
+  });
 
   const prevButton = document.querySelector('.prev-img');
   const nextButton = document.querySelector('.next-img');
@@ -143,4 +143,32 @@ document.addEventListener('DOMContentLoaded', function () {
   imgHome.addEventListener('click', function () {
     window.location.href = 'http://127.0.0.1:5500/L%E1%BA%ADp%20tr%C3%ACnh%20Web%20B%C3%A1ch%20H%C3%B3a%20Xanh/HTML/Trang%20ch%E1%BB%A7/TrangChu.html';
   });
+
+  const storedProduct = localStorage.getItem('selectedProduct');
+
+  if (storedProduct) {
+    const productData = JSON.parse(storedProduct);
+
+    const productNameElement = document.querySelector('.CTSP-name a');
+    const productRatingElement = document.querySelector('.CTSP-DG p:nth-child(1)');
+    const productOriginalPriceElement = document.querySelector('.CTSP-cost .CTSP-cost_GiaGoc');
+    const productSalePriceElement = document.querySelector('.CTSP-cost a');
+    const productDiscountElement = document.querySelector('.CTSP-cost .CTSP-cost-GG');
+
+    productNameElement.textContent = productData.name.trim();
+    productRatingElement.textContent = `${productData.stars.trim()} ☆`;
+    productOriginalPriceElement.textContent = productData.price.trim();
+    productSalePriceElement.textContent = productData.sales.trim();
+    productDiscountElement.textContent = productData.pt.trim();
+  }
+
+  // Lấy phần tử hình ảnh từ DOM
+  const productImageElement = document.getElementById('productImage');
+
+  // Gán đường dẫn hình ảnh từ selectedProduct vào thuộc tính src của thẻ <img>
+  if (storedProduct) {
+    const productData = JSON.parse(storedProduct);
+    productImageElement.src = productData.img;
+  }
+
 });
