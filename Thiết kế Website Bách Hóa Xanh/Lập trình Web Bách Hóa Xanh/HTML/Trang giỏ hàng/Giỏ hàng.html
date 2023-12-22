@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Danh mục sản phẩm</title>
+  <link rel="stylesheet" href="Giỏ hàng.css">
+  <link rel="stylesheet" href="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/TrangChu.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap"
+    rel="stylesheet">
+
+  <script src="GIỏ hàng.js"></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="menuHead">
+        <div class="logo">
+          <a>Bách hóa xanh</a>
+        </div>
+        <div class="search-text">
+          <input type="search" name="Tìm kiếm" placeholder="Tìm kiếm của bạn ..." />
+          <img class="icon-search"
+            src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/header/search-interface-symbol.png" />
+        </div>
+        <ul>
+          <li>
+            <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/header/home.png" />
+            <!-- <a class="txtTT">Trang chủ</a> -->
+          </li>
+          <li>
+            <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/header/category.png" />
+            <!-- <a class="txtDM">Danh mục</a> -->
+          </li>
+          <li>
+            <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/header/user.png" />
+            <!-- <a class="txtDN">Đăng nhập</a> -->
+          </li>
+          <li>
+            <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/header/bell.png" />
+            <!-- <a class="txtTB">Thông báo</a> -->
+          </li>
+          <li>
+            <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/header/shopping-cart.png" />
+            <!-- <a class="txtGH">Giỏ hàng</a> -->
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="cart">
+      <div class="cart-container">
+        <div class="cart-container-txt">
+          <h1>Giỏ hàng</h1>
+          <div class="div-line2"></div>
+        </div>
+
+        <div class="cart-container-product">
+          <div class="cart-container-product-img">
+            <img
+              src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/SanPham/Sales/3-cay-kem-vani-socola-merino-super-teen-60g-202310101347489756.jpg">
+          </div>
+          <div class="cart-container-product-info">
+            <p>3 cây kem vani socola Merino Super Teen 60g</p>
+            <div class="cart-container-product-info-container">
+              <div class="sales-txt">
+                <p style="text-decoration-line: line-through; color: black;" id="product-price">
+                  280.000đ
+                </p>
+                <p id="product-sales">
+                  230.000đ
+                </p>
+              </div>
+              <div class="sales-stars">
+                <div class="cart-container-product-info-sales">
+                  <a class="product-stars">
+                    4.5
+                    <img src="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/SanPham/star.png">
+                  </a>
+                  <p>
+                    -25%
+                  </p>
+                </div>
+              </div>
+
+              <div class="CTSP-SL-numbers">
+                <button class="btGiam">-</button>
+                <a class="ipNumbers">0 </a>
+                <button class="btTang">+</button>
+                
+              </div>
+
+            </div>          
+          </div> 
+          <div class="cart-price">
+            <h1>Thanh toán </h1>
+            <a>Giá tiền </a>
+            <a>Giảm giá </a>
+            <a>Phiếu giảm giá</a>
+          </div>        
+        </div>        
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

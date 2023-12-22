@@ -156,9 +156,8 @@ main {
 }
 
 .div-line{
-  border: 1px solid #cccbc8;
-  margin-bottom: 20px;
-  margin-top: 5px;
+  padding   : 1rem 0 1rem 2.5rem;
+  border-top: 1px solid rgba(0, 0, 0, .09);
 }
 
 
