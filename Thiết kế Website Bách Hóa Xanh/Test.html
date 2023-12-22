@@ -1,21 +1,20 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
-
+<html lang="en">
 <head>
-  <title>Angular Route Example</title>
-  <script src="Angular JS/angular-1.8.2/angular.js"></script>
-  <script src="Angular JS/angular-1.8.2/angular-route.js"></script>
+  <meta charset="UTF-8">
+  <title>Đồng hồ đếm ngược</title>
+  <link rel="stylesheet" href="Test.css">
   <script src="Test.js"></script>
+
 </head>
-
 <body>
-  <h1>AngularJS Route Example</h1>
-  <ul>
-    <li><a href="#/home">Home</a></li>
-    <li><a href="#/about">About</a></li>
-  </ul>
+  <div id="clock" class="countdown">
+    <div id="days"></div>
+    <div id="hours"></div>
+    <div id="minutes"></div>
+    <div id="seconds"></div>
+  </div>  
 
-  <div ng-view></div>
 </body>
 
 </html>
