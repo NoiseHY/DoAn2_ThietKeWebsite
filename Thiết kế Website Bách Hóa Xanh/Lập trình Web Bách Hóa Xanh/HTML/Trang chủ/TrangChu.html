@@ -26,7 +26,7 @@
         </div>
         <ul>
           <li>
-            <img src="Anh/header/home.png" />
+            <img src="Anh/header/home.png" id="imgHome">
             <!-- <a class="txtTT">Trang chủ</a> -->
           </li>
           <li>
@@ -211,67 +211,67 @@
         <section class="sectionSanpham">
           <div class="Sanpham-tpye">
             <picture>
-              <img src="Anh/SanPham/Sales/dau-thuc-vat-tuong-an.jpg">
+              <img id="product-img" src="Anh/SanPham/Sales/dau-thuc-vat-tuong-an.jpg">
             </picture>
-            <p>
+            <p id="product-name">
               Dầu thực vật Tường An Cooking Oil can 5 lít
             </p>
             <div class="Sanpham-cost">
               <div class="Sanpham-cost-container">
                 <div class="Sanpham-cost-sales">
-                  <p style="text-decoration-line: line-through; color: black;">
+                  <p style="text-decoration-line: line-through; color: black;" id="product-price">
                     280.000đ
                   </p>
-                  <p>
+                  <p id="product-sales">
                     230.000đ
                   </p>
                 </div>
                 <div class="Sanpham-cost-phantram">
-                  <a>
+                  <a class="product-stars">
                     4.5
                     <img src="Anh/SanPham/star.png">
                   </a>
-                  <p>
+                  <p class="product-pt">
                     -25%
                   </p>
                 </div>
               </div>
             </div>
-            <button class="danhmuc-CT-sp-bt">
+            <button class="danhmuc-CT-sp-bt" onclick="addToLocalStorage()">
               Mua
             </button>
           </div>
 
           <div class="Sanpham-tpye">
             <picture>
-              <img src="Anh/SanPham/Sales/cam.jpg">
+              <img src="Anh/SanPham/Sales/cam.jpg" id="product-img">
             </picture>
-            <p>
+            <p id="product-name">
               Cam Cara Úc 1kg (9 - 11 trái)
             </p>
             <div class="Sanpham-cost">
               <div class="Sanpham-cost-container">
                 <div class="Sanpham-cost-sales">
-                  <p style="text-decoration-line: line-through; color: black;">
+                  <p style="text-decoration-line: line-through; color: black;" id="product-price">
                     280.000đ
                   </p>
-                  <p>
+                  <p id="product-sales">
                     230.000đ
                   </p>
                 </div>
                 <div class="Sanpham-cost-phantram">
-                  <a>
+                  <a id="product-stars">
                     4.5
                     <img src="Anh/SanPham/star.png">
                   </a>
-                  <p>
+                  <p id="product-pt">
                     -25%
                   </p>
                 </div>
               </div>
 
             </div>
-            <button class="danhmuc-CT-sp-bt">
+            <button class="danhmuc-CT-sp-bt" onclick="addToLocalStorage()">
               Mua
             </button>
           </div>

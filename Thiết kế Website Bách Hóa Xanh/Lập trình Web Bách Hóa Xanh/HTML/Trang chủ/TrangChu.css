@@ -227,7 +227,7 @@ picture img {
   height: 30px;
   padding: 16px;
   border-radius: 5px;
-  background-color: #333;
+  background-color: #454d66;
   color: #fff;
   text-align: center;
   font-size: 24px;
@@ -277,20 +277,21 @@ picture img {
 .Sanpham-tpye {
   align-items: center;
   width      : 200px;
-  height     : 200px;
+  height     : 350px;
   margin     : 20px;
   transition : transform 0.3s ease;
-  margin-bottom: 10em;
+  
 }
+
 
 .Sanpham-tpye img {
   height: 150px;
   width: 150px;
 }
 
-.Sanpham-tpye img:hover{
+/* .Sanpham-tpye img:hover{
   transform: scale(1.1);
-}
+} */
 
 .Sanpham-tpye p {
   color             : black;
