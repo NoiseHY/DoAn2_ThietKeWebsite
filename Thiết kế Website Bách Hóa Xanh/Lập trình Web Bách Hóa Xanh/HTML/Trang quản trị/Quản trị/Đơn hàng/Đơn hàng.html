@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Quản lý đơn hàng</title>
+  <link rel="stylesheet" href="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Đơn hàng/Đơn hàng.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap"
+    rel="stylesheet">
+
+  <script src="/Angular JS/angular-1.8.2/angular.js" ></script>
+  <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Đơn hàng/Đơn hàng.js"></script>
+</head>
+
+<body>
+  <div class="container" ng-app="DonHangModule" ng-controller="OrderController">
+    <h1>Quản lý đơn hàng</h1>
+    <div class="form">
+      <input type="text" ng-model="productId" placeholder="ID sản phẩm">
+      <input type="text" ng-model="productName" placeholder="Tên sản phẩm">
+      <input ng-model="productPrice" placeholder="Đơn giá">
+      <input ng-model="productQuantity" placeholder="Số lượng">
+      <div class="buttons">
+        <button ng-click="addOrder()" id="addButton">Thêm</button>
+        <button ng-click="editOrder()" id="editButton">Sửa</button>
+        <button ng-click="deleteOrder()" id="deleteButton">Xóa</button>
+      </div>
+    </div>
+    <table id="orderTable">
+      <thead>
+        <tr>
+          <th>ID sản phẩm</th>
+          <th>Tên sản phẩm</th>
+          <th>Đơn giá</th>
+          <th>Số lượng</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="order in orderList">
+          <td>{{ order.id }}</td>
+          <td>{{ order.name }}</td>
+          <td>{{ order.quantity }}</td>
+          <td>{{ order.total }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</body>
+
+</html>
