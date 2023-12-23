@@ -3,7 +3,7 @@ angular.module('DonHangModule', [])
     $scope.validateProductId = function () {
       var productId = $scope.productId;
       if (!productId) {
-        alert("Vui lòng nhập mã sản phẩm!");
+        alert("Vui lòng nhập mã đơn hàng!");
         return false;
       }
 
@@ -18,33 +18,21 @@ angular.module('DonHangModule', [])
       return true;
     };
 
-    $scope.addOrder = function () {
-      $scope.orderList = [];
+    $scope.orderList = [];
 
+    $scope.addOrder = function () {
       if (!$scope.validateProductId()) {
         return;
       }
-    
-      var productId = $scope.productId;
-      var orderList = $scope.orderList;
-      var found = false;
-    
-      for (var i = 0; i < orderList.length; i++) {
-        if (orderList[i].id === productId) {
-          orderList[i].quantity += parseInt($scope.productQuantity);
-          orderList[i].total = orderList[i].price * orderList[i].quantity;
-          found = true;
-          break;
-        }
-      }    
-    
-      if (!found) {
-        var product = {
-          id: $scope.productId,
-        };
-        
-        $scope.orderList.push(product);
-      }
+
+      var donhang = {
+        id: $scope.productId,
+        name: $scope.productName,
+        price: $scope.productPrice,
+        quantity: $scope.productQuantity
+      };
+
+      $scope.orderList.push(donhang);
     };
 
     $scope.editOrder = function () {
@@ -74,12 +62,12 @@ angular.module('DonHangModule', [])
 
       for (var i = 0; i < orderList.length; i++) {
         if (orderList[i].id === productId) {
-          var confirmation = confirm("Bạn có chắc chắn muốn xóa sản phẩm này?");
+          var confirmation = confirm("Bạn có chắc chắn muốn xóa đơn hàng này?");
           if (confirmation) {
             orderList.splice(i, 1);
-            alert("Sản phẩm đã được xóa!");
+            alert("Đơn hàng đã được xóa!");
           } else {
-            alert("Hủy bỏ việc xóa sản phẩm.");
+            alert("Hủy bỏ việc xóa đơn hàng");
           }
           break;
         }

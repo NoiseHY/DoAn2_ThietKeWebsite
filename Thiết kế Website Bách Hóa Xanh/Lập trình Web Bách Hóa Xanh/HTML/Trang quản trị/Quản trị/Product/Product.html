@@ -2,70 +2,51 @@
 <html>
 
 <head>
-  <title>Người dùng</title>
+  <title>Sản phẩm</title>
   <link rel="stylesheet" href="Trang quản trị.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400&display=swap" rel="stylesheet">
-
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap"
     rel="stylesheet">
-  </P>
+    
   <link rel="stylesheet" href="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Product/Product.css">
+
+  <script src="/Angular JS/angular-1.8.2/angular.js"></script>
   <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Product/Product.js"></script>
 
 </head>
 
 <body>
-  <div class="customer-container">
-    <div class="form-group">
-      <input type="text" id="fullname" name="fullname" required>
-      <label for="fullname">Tên sản phẩm</label>
+  <div class="container" ng-app="ProductModule" ng-controller="ProductController">
+    <h1>Quản lý sản phẩm</h1>
+    <div class="form">
+      <input type="text" ng-model="productId" placeholder="ID sản phẩm ">
+      <input type="text" ng-model="productName" placeholder="Tên sản phẩm">
+      <input ng-model="productPrice" placeholder="Đơn giá ">
+      <input ng-model="productQuantity" placeholder="Số lượng">
+      <div class="buttons">
+        <button ng-click="addOrder()" id="addButton">Thêm</button>
+        <button ng-click="editOrder()" id="editButton">Sửa</button>
+        <button ng-click="deleteOrder()" id="deleteButton">Xóa</button>
+      </div>
     </div>
-    <div class="form-group">
-      <input type="text" id="fullname" name="fullname" required>
-      <label for="fullname">Mô tả</label>
-    </div>
-    <div class="form-group">
-      <input type="text" id="fullname" name="fullname" required>
-      <label for="fullname">Số lượng</label>
-    </div>
-    <div class="form-group">
-      <input type="text" id="fullname" name="fullname" required>
-      <label for="fullname">Đơn giá</label>
-    </div>
-    
-    <button type="submit">Làm mới</button>
-    <button type="submit">Thêm dữ liệu</button>
-    <button type="submit">Sửa dữ liệu </button>
-    <button type="submit">Xóa dữ liệu</button>
-
-    <table>
+    <table id="orderTable">
       <thead>
         <tr>
-          <th>Mã KH</th>
-          <th>Tên KH</th>
-          <th>Địa chỉ</th>
-          <th>Số điện thoại</th>
-          <th>Ngày sinh</th>
+          <th>ID sản phẩm </th>
+          <th>Tên sản phẩm</th>
+          <th>Đơn giá </th>
+          <th>Số lượng</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Nguyễn Văn A</td>
-          <td>Hà Nội</td>
-          <td>0123456789</td>
-          <td>01/01/1990</td>
+        <tr ng-repeat="order in orderList">
+          <td>{{ order.id }}</td>
+          <td>{{ order.name }}</td>
+          <td>{{ order.price }}</td>
+          <td>{{ order.quantity }}</td>
         </tr>
-        
       </tbody>
     </table>
   </div>

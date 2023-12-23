@@ -2,27 +2,28 @@
 <html>
 
 <head>
-  <title>Khách hàng</title>
+  <title>Quản lý tài khoản </title>
   <link rel="stylesheet" href="Trang quản trị.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Customer/Customer.css">
+    
+  <link rel="stylesheet" href="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Tài khoản/Tài khoản.css">
+
   <script src="/Angular JS/angular-1.8.2/angular.js"></script>
-  <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Customer/Customer.js"></script>
+  <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Tài khoản/Tài khoản.js"></script>
+
 </head>
 
 <body>
-  <div class="container" ng-app="CustomerModule" ng-controller="CustomerController">
-    <h1>Quản lý khách hàng</h1>
+  <div class="container" ng-app="AccountModule" ng-controller="AccountController">
+    <h1>Quản lý tài khoản</h1>
     <div class="form">
-      <input type="text" ng-model="customerId" placeholder="ID khách hàng ">
-      <input type="text" ng-model="customerName" placeholder="Tên khách hàng">
-      <input ng-model="customerAddress" placeholder="Địa chỉ ">
-      <input ng-model="customerNumber" placeholder="Số điện thoại">
+      <input type="text" ng-model="accountId" placeholder="ID tài khoản  ">
+      <input type="text" ng-model="accountName" placeholder="Tên tài khoản ">
+      <input ng-model="accountPassword" placeholder="Mật khẩu tài khoản ">
       <div class="buttons">
         <button ng-click="addOrder()" id="addButton">Thêm</button>
         <button ng-click="editOrder()" id="editButton">Sửa</button>
@@ -32,24 +33,20 @@
     <table id="orderTable">
       <thead>
         <tr>
-          <th>ID khách hàng</th>
-          <th>Tên khách hàng</th>
-          <th>Địa chỉ </th>
-          <th>Số điện thoại</th>
+          <th>ID tài khoản  </th>
+          <th>Tên tài khoản </th>
+          <th>Mật khẩu tài khoản </th>
         </tr>
       </thead>
       <tbody>
         <tr ng-repeat="order in orderList">
           <td>{{ order.id }}</td>
           <td>{{ order.name }}</td>
-          <td>{{ order.address }}</td>
-          <td>{{ order.phone }}</td>
+          <td>{{ order.password }}</td>
         </tr>
       </tbody>
     </table>
   </div>
-   
 </body>
-
 
 </html>

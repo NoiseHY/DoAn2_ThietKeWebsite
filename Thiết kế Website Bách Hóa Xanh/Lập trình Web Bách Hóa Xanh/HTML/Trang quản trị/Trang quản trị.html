@@ -17,6 +17,10 @@
   
   <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Trang quản trị.js"></script>
   <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Đơn hàng/Đơn hàng.js"></script>
+  <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Customer/Customer.js"></script>
+  <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Home/Home.js"></script>
+  <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Product/Product.js"></script>
+  <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Tài khoản/Tài khoản.js"></script>
 </head>
 
 <body ng-app="myApp">
@@ -84,7 +88,7 @@
               
               <div class="submenu-ql-kh" ng-click="navigateToPageKH()" ng-controller="QuanLyKhachHangController" >Quản lý Khách hàng</div>
               
-              <div class="submenu-ql-nd">Người dùng</div>
+              <div class="submenu-ql-nd" ng-click="navigateToTK()" ng-controller="QuanlyTKController">Tài khoản</div>
             </div>
 
           </div>
