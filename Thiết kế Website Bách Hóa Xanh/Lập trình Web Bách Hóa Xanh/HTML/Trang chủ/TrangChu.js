@@ -39,6 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
     window.location.href = 'http://127.0.0.1:5500/L%E1%BA%ADp%20tr%C3%ACnh%20Web%20B%C3%A1ch%20H%C3%B3a%20Xanh/HTML/Trang%20danh%20m%E1%BB%A5c/Danhmuc.html';
   });
 
+  // Event listener cho hình ảnh
+  var imgCart = document.getElementById('imgCart');
+  imgCart.addEventListener('click', function () {
+    window.location.href = 'http://127.0.0.1:5500/L%E1%BA%ADp%20tr%C3%ACnh%20Web%20B%C3%A1ch%20H%C3%B3a%20Xanh/HTML/Trang%20gi%E1%BB%8F%20h%C3%A0ng/Gi%E1%BB%8F%20h%C3%A0ng.html';
+  });
+
+
   document.addEventListener('DOMContentLoaded', function() {
     // Các đoạn mã để đếm ngược
     const phầnTửNgày = document.querySelector("#days");
@@ -72,14 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
     const cậpNhậtMỗiGiây = setInterval(cậpNhậtĐồngHồ, 1000);
-    cậpNhậtĐồngHồ();
-  
-    // Event listener cho hình ảnh
-    var imgDanhMuc = document.getElementById('imgDanhMuc');
-    imgDanhMuc.addEventListener('click', function () {
-      window.location.href = 'http://127.0.0.1:5500/L%E1%BA%ADp%20tr%C3%ACnh%20Web%20B%C3%A1ch%20H%C3%B3a%20Xanh/HTML/Trang%20danh%20m%E1%BB%A5c/Danhmuc.html';
-    });
-  
+    cậpNhậtĐồngHồ(); 
     
   });
   
