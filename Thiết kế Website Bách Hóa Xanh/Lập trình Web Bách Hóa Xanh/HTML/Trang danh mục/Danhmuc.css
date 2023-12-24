@@ -17,27 +17,24 @@
   margin-bottom: 2px;
 }
 
-.has-submenu a{
-  font-size: 16px;
+.container {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
-.has-submenu:hover .submenu-dropdown{
-  display: block;
-}
-
-.submenu-dropdown{
+.child {
   display: none;
-  cursor: pointer;
+  border: 1px solid #eee;
+  margin-top: 5px;
+  font-size: 15px;
+  font-weight: normal;
+  padding   : 5px 0px 5px 10px;
+  border-top: 1px solid rgba(0, 0, 0, .09);
 }
 
-.submenu-dropdown div{
-  padding: 15px;
-  border: 1px solid white;
-  cursor: pointer;
-  color: black;
-  font-size: 13px;
-  
-}
 
 .menuDM{
   left: 0;
@@ -61,28 +58,8 @@
   width: 15em;
 }
 
-.menuDM-container ul li .has-submenu-txt {
-  display: block;
-  padding: 5px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  width: 100%;
-}
 
-.menuDM-container .submenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #f5f4f1;
-  z-index: 1;
-  width: 100%;
-}
 
-.menuDM-container .has-submenu.active > .submenu {
-  display: block;
-}
 
 .submenu li {
   border: 1px solid #ccc;
@@ -117,17 +94,20 @@
 .loaiThit{
   margin-top: 20px;
   display: flex;
+  cursor: pointer;
 }
 
 .loaiThit img{
   height: 60px;
   width: 60px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .loaiThit p {
   text-align: center;
   font-size: 13px;
 }
+
 
 .banner{
   width: 100%;
@@ -173,11 +153,24 @@
 .danhmuc-CT-sp p{
   margin-bottom: 10px;
   font-size: 13px;
+  
 }
 .danhmuc-CT-sp a {
   font-size: 13px;
 }
 
+.danhmuc-CT-sp-star{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.danhmuc-CT-sp-star p{
+  margin-left: 20px;
+}
+.danhmuc-CT-sp-star p> img{
+  height: 20px;
+  width: 20px;
+}
 .danhmuc-CT-sale{
   margin-top: 10px;
   width: 100%;
@@ -190,9 +183,10 @@
   color: white;
   padding: 5px;
   background-color: red;
+  opacity  : 0;
+  animation: showHide 0.5s infinite;
 }
 .danhmuc-CT-sp-bt{
-  margin-top: 20px;
   width: 100%;
   height: 3em;
   border-radius: 5px;
@@ -201,6 +195,8 @@
   cursor: pointer;
   font-size: 13px;
 }
+
+
 .danhmuc-CT-sp-bt:hover{
   border: 1px solid #03a63c;
 }
@@ -236,7 +232,7 @@
   font-size: 16px;
 }
 
-.div-line{
+.div-line2{
   border-bottom: 1px solid #cccbc8;
   margin-top: 20px;
   margin-bottom: 20px;

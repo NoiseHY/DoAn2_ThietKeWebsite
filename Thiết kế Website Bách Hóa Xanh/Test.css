@@ -1,22 +1,14 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+
+.container {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 
-.countdown {
-  display: flex;
+.child {
+  display: none;
+  padding: 5px;
+  border: 1px solid #eee;
+  margin-top: 5px;
 }
 
-.countdown div {
-  margin: 0 10px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  font-size: 24px;
-}

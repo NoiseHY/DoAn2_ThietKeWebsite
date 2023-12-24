@@ -385,15 +385,11 @@ picture img {
   border: 1px solid #03a63c;
 }
 
-/* Định dạng ban đầu của phần tử p */
 .Sanpham-cost-phantram p {
   position : absolute;
   top      : -25%;
-  /* Đặt vị trí ban đầu là -25% */
   opacity  : 0;
-  /* Ẩn phần tử */
   animation: showHide 0.5s infinite;
-  /* Sử dụng animation để tự động hiển thị và ẩn đi */
 }
 
 /* Keyframe animation */

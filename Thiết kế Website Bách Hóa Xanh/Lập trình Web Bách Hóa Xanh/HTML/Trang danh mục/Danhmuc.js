@@ -1,40 +1,40 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const menuItems = document.querySelectorAll('.menuDM .has-submenu > a');
+function toggleChildren(event) {
+  const containers = document.querySelectorAll('.container');
+  const currentContainer = event.currentTarget;
+  const currentChildren = currentContainer.querySelectorAll('.child');
 
-  menuItems.forEach(function(item) {
-    item.addEventListener('click', function(event) {
-      event.preventDefault();
-      const parent = this.parentElement;
-      if (parent.classList.contains('active')) {
-        parent.classList.remove('active');
-      } else {
-        // Ẩn submenu
-        document.querySelectorAll('.menuDM .has-submenu').forEach(function(sub) {
-          sub.classList.remove('active');
-        });
-        parent.classList.add('active');
-      }
+  // Kiểm tra trạng thái hiển thị của div cha hiện tại
+  const isCurrentContainerDisplayed = currentContainer.dataset.displayed === 'true';
+
+  // Nếu div cha hiện tại đang được hiển thị, đóng nó lại và kết thúc hàm
+  if (isCurrentContainerDisplayed) {
+    currentChildren.forEach(child => {
+      child.style.display = 'none';
     });
-  });
+    currentContainer.dataset.displayed = 'false';
+    return;
+  }
 
-  const submenuItems = document.querySelectorAll('.menuDM .has-submenu .submenu a');
-
-  submenuItems.forEach(function(submenuItem) {
-    submenuItem.addEventListener('click', function(event) {
-      event.stopPropagation(); // Ngăn chặn sự kiện click lan rộng đến cha nếu có
-      document.querySelectorAll('.menuDM .has-submenu').forEach(function(sub) {
-        sub.classList.remove('active');
+  // Ẩn tất cả các children của các div cha khác
+  containers.forEach(container => {
+    if (container !== currentContainer) {
+      const children = container.querySelectorAll('.child');
+      children.forEach(child => {
+        child.style.display = 'none';
       });
-    });
-  });
-
-  // Ẩn submenu khi click
-  document.addEventListener('click', function(event) {
-    const isClickInsideMenu = document.querySelector('.menuDM').contains(event.target);
-    if (!isClickInsideMenu) {
-      document.querySelectorAll('.menuDM .has-submenu').forEach(function(sub) {
-        sub.classList.remove('active');
-      });
+      container.dataset.displayed = 'false';
     }
   });
-});
+
+  // Hiển thị hoặc ẩn children của div cha hiện tại
+  currentChildren.forEach(child => {
+    if (child.style.display === 'none' || child.style.display === '') {
+      child.style.display = 'block';
+    } else {
+      child.style.display = 'none';
+    }
+  });
+
+  // Đặt trạng thái hiển thị của div cha hiện tại là true
+  currentContainer.dataset.displayed = 'true';
+}
