@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html >
+<html>
 
 <head>
   <title>Trang người dùng</title>
   <link rel="stylesheet" href="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Trang quản trị.css">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap"
     rel="stylesheet">
 
+  <link rel="icon" type="image/x-icon"
+    href="/Lập trình Web Bách Hóa Xanh/HTML/Trang chủ/Anh/Icon/Icon-Bach-Hoa-Xanh.png">
+
   <!-- <link href="Quản trị/Customer/Customer.html" >  -->
   <script src="/Angular JS/angular-1.8.2/angular.min.js"></script>
   <script src="/Angular JS/angular-1.8.2/angular-route.js"></script>
-  
+
   <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Trang quản trị.js"></script>
   <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Đơn hàng/Đơn hàng.js"></script>
   <script src="/Lập trình Web Bách Hóa Xanh/HTML/Trang quản trị/Quản trị/Customer/Customer.js"></script>
@@ -69,10 +72,10 @@
         <div class="menuND-nd" ng-click="navigateToAdmin()" ng-controller="QuanLyAdminController">
           <img src="Anh/side-bar/user.png">
           Trang chủ
-          
+
         </div>
         <div class="menuND-ql">
-          <div class="menuND-ql-txt" >
+          <div class="menuND-ql-txt">
             <img src="Anh/side-bar/manager.png">
             Quản lý
             <span class="more-icon">&#8942;</span>
@@ -81,13 +84,16 @@
 
           <div class="submenu-ql">
             <div class="submenu-dropdown">
-              
-              <div class="submenu-ql-sp" ng-click="navigateToPageSP()" ng-controller="QuanLySanPhamController">Quản lý Sản phẩm</div>
 
-              <div class="submenu-ql-dh" ng-click ="navigateToDH()" ng-controller="QuanlyDHController">Quản lý Đơn hàng</div>
-              
-              <div class="submenu-ql-kh" ng-click="navigateToPageKH()" ng-controller="QuanLyKhachHangController" >Quản lý Khách hàng</div>
-              
+              <div class="submenu-ql-sp" ng-click="navigateToPageSP()" ng-controller="QuanLySanPhamController">Quản lý
+                Sản phẩm</div>
+
+              <div class="submenu-ql-dh" ng-click="navigateToDH()" ng-controller="QuanlyDHController">Quản lý Đơn hàng
+              </div>
+
+              <div class="submenu-ql-kh" ng-click="navigateToPageKH()" ng-controller="QuanLyKhachHangController">Quản lý
+                Khách hàng</div>
+
               <div class="submenu-ql-nd" ng-click="navigateToTK()" ng-controller="QuanlyTKController">Tài khoản</div>
             </div>
 
@@ -108,10 +114,10 @@
       </div>
     </div>
 
-    <div class="admin-content"   ng-view ="">
+    <div class="admin-content" ng-view="">
 
     </div>
-    
+
   </main>
 </body>
 
