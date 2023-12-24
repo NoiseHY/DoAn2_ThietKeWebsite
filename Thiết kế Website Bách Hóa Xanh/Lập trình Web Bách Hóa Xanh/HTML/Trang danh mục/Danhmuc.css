@@ -139,11 +139,7 @@
   margin-top: 10px;
   justify-content: center;
 }
-.danhmuc-CT div img{
-  height: 12em;
-  width: auto;
-  
-}
+
 
 .danhmuc-CT-sp{
   width: 240px;
@@ -158,7 +154,9 @@
 .danhmuc-CT-sp a {
   font-size: 13px;
 }
-
+.danhmuc-CT-sp img{
+  width: 100%;
+}
 .danhmuc-CT-sp-star{
   width: 100%;
   display: flex;
