@@ -7,13 +7,6 @@ angular.module('DonHangModule', [])
         return false;
       }
 
-      var productPrice = $scope.productPrice;
-      var productQuantity = $scope.productQuantity;
-
-      if (isNaN(productPrice) || isNaN(productQuantity)) {
-        alert("Đơn giá và số lượng phải là số!");
-        return false;
-      }
 
       return true;
     };
@@ -28,8 +21,8 @@ angular.module('DonHangModule', [])
       var donhang = {
         id: $scope.productId,
         name: $scope.productName,
-        price: $scope.productPrice,
-        quantity: $scope.productQuantity
+        customer: $scope.productCustomer,
+        time: $scope.productTime
       };
 
       $scope.orderList.push(donhang);
@@ -45,8 +38,8 @@ angular.module('DonHangModule', [])
       for (var i = 0; i < orderList.length; i++) {
         if (orderList[i].id === productId) {
           orderList[i].name = $scope.productName;
-          orderList[i].quantity = $scope.productQuantity;
-          orderList[i].total = $scope.productPrice * $scope.productQuantity;
+          orderList[i].customer = $scope.productCustomer;
+          orderList[i].time = $scope.productCustomer * $scope.productTime;
           break;
         }
       }

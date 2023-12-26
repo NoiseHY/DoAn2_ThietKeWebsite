@@ -19,10 +19,10 @@
   <div class="container" ng-app="DonHangModule" ng-controller="OrderController">
     <h1>Quản lý đơn hàng</h1>
     <div class="form">
-      <input type="text" ng-model="productId" placeholder="ID sản phẩm">
-      <input type="text" ng-model="productName" placeholder="Tên sản phẩm">
-      <input ng-model="productPrice" placeholder="Đơn giá">
-      <input ng-model="productQuantity" placeholder="Số lượng">
+      <input type="text" ng-model="productId" placeholder="ID đơn hàng">
+      <input type="text" ng-model="productName" placeholder="Tên đơn hàng">
+      <input ng-model="productCustomer" placeholder="Người đặt">
+      <input ng-model="productTime" placeholder="Thời gian">
       <div class="buttons">
         <button ng-click="addOrder()" id="addButton">Thêm</button>
         <button ng-click="editOrder()" id="editButton">Sửa</button>
@@ -32,18 +32,18 @@
     <table id="orderTable">
       <thead>
         <tr>
-          <th>ID sản phẩm</th>
-          <th>Tên sản phẩm</th>
-          <th>Đơn giá</th>
-          <th>Số lượng</th>
+          <th>ID đơn hàng</th>
+          <th>Tên đơn hàng</th>
+          <th>Người đặt</th>
+          <th>Thời gian</th>
         </tr>
       </thead>
       <tbody>
         <tr ng-repeat="order in orderList">
           <td>{{ order.id }}</td>
           <td>{{ order.name }}</td>
-          <td>{{ order.quantity }}</td>
-          <td>{{ order.quantity }}</td>
+          <td>{{ order.customer }}</td>
+          <td>{{ order.time }}</td>
         </tr>
       </tbody>
     </table>
