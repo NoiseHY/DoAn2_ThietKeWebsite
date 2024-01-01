@@ -152,3 +152,7 @@
   color: #03a63c;
   cursor: pointer;
 }
+.cart-container-product-info-bt input{
+  padding: 5px;
+  margin-bottom: 10px;
+}

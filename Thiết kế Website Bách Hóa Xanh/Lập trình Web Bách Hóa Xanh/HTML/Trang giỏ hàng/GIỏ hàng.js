@@ -38,6 +38,8 @@ document.addEventListener('DOMContentLoaded', function () {
               </div>                           
             </div>
             <div class="cart-container-product-info-bt">
+              <input type="number" min="1" value="1" class="product-quantity"> <!-- Input số lượng -->
+              <button class="update-quantity-btn">Cập nhật số lượng</button> <!-- Button cập nhật số lượng -->
               <button>
                 Xóa sản phẩm 
               </button>
@@ -49,40 +51,96 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
       `;
 
+      const quantityInput = productDiv.querySelector('.product-quantity');
+      const updateQuantityBtn = productDiv.querySelector('.update-quantity-btn');
+  
+      updateQuantityBtn.addEventListener('click', function () {
+        const newQuantity = parseInt(quantityInput.value, 10);
+        product.quantity = newQuantity; // Cập nhật số lượng sản phẩm trong đối tượng product
+  
+        calculateTotalPrice(); // Tính lại tổng giá tiền
+        calculateShippingAndTotal(); // Tính lại phí vận chuyển và tổng thanh toán
+      });
+
+
       cartContainer.appendChild(productDiv);
     });
   }
 
-  // Gọi hàm render 
+
   renderProducts();
 
-  // Tính tổng tiền
   function calculateTotalPrice() {
     const totalPriceElement = document.querySelector('.cart-price-tt p');
     let total = 0;
-
+  
     productList.forEach(product => {
+      const productQuantity = product.quantity || 1; // Số lượng sản phẩm, nếu không có số lượng thì mặc định là 1
       const price = parseFloat(product.sales.trim().replace('đ', '').replace('.', '').replace(',', '.'));
-      total += price;
+  
+      total += price * productQuantity; // Tính tổng giá tiền cho từng sản phẩm
     });
-
+  
     totalPriceElement.textContent = `${total.toFixed(2).replace('.', ',')}đ`;
   }
+  
 
-  // Tính phí vận chuyển và tổng thanh toán
   function calculateShippingAndTotal() {
     const shippingFeeElement = document.querySelector('.cart-price-vc p');
     const totalPaymentElement = document.querySelector('.cart-price-tong p');
-    const shippingFee = 50000; // Giả sử phí vận chuyển là 50.000đ
-
-    shippingFeeElement.textContent = `${shippingFee.toFixed(2).replace('.', ',')}đ`;
-
+    const shippingFeePerProduct = 5000; // Giả sử phí vận chuyển cho mỗi sản phẩm là 5000đ (bạn có thể thay đổi giá trị này)
+  
+    let totalShippingFee = 0;
+  
+    productList.forEach(product => {
+      const productQuantity = product.quantity || 1; // Số lượng sản phẩm, nếu không có số lượng thì mặc định là 1
+      totalShippingFee += shippingFeePerProduct * productQuantity; // Tính phí vận chuyển cho từng sản phẩm
+    });
+  
+    shippingFeeElement.textContent = `${totalShippingFee.toFixed(2).replace('.', ',')}đ`;
+  
     const totalPrice = parseFloat(document.querySelector('.cart-price-tt p').textContent.replace('đ', '').replace('.', '').replace(',', '.'));
-    const totalPayment = totalPrice + shippingFee;
+    const totalPayment = totalPrice + totalShippingFee;
     totalPaymentElement.textContent = `${totalPayment.toFixed(2).replace('.', ',')}đ`;
   }
+  
 
   // Gọi hàm tính tổng tiền, phí vận chuyển và tổng thanh toán
   calculateTotalPrice();
   calculateShippingAndTotal();
+
+  var imgThanhtoan = document.getElementById('imgThanhtoan');
+  imgThanhtoan.addEventListener('click', function () {
+    const cartProducts = document.querySelectorAll('.cart-container-product');
+
+    const allProducts = [];
+
+    cartProducts.forEach(productElement => {
+      const productName = productElement.querySelector('p').textContent.trim();
+      const productImage = productElement.querySelector('.cart-container-product-img img').getAttribute('src');
+      const productPrice = productElement.querySelector('#product-price').textContent.trim();
+      const productSales = productElement.querySelector('#product-sales').textContent.trim();
+      const productStar = productElement.querySelector('.product-stars').textContent.trim();
+      const productPT = productElement.querySelector('.cart-container-product-info-sales p').textContent.trim();
+      const productQuantity = parseInt(productElement.querySelector('.product-quantity').value, 10);
+
+      // Tạo đối tượng sản phẩm từ dữ liệu thu thập được
+      const product = {
+        name: productName,
+        img: productImage,
+        price: productPrice,
+        sales: productSales,
+        star: productStar,
+        pt: productPT,
+        quantity: productQuantity,
+      };
+
+      allProducts.push(product);
+    });
+
+    // Lưu tất cả dữ liệu sản phẩm vào localStorage
+    localStorage.setItem('allProductsJSON', JSON.stringify(allProducts));
+
+    window.location.href = 'http://127.0.0.1:5500/L%E1%BA%ADp%20tr%C3%ACnh%20Web%20B%C3%A1ch%20H%C3%B3a%20Xanh/HTML/Trang%20thanh%20to%C3%A1n/Trang%20thanh%20to%C3%A1n.html';
+  })
 });
