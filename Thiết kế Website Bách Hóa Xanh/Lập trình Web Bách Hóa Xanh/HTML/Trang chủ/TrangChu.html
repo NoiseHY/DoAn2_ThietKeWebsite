@@ -37,7 +37,7 @@
             <!-- <a class="txtDM">Danh mục</a> -->
           </li>
           <li>
-            <img src="Anh/header/user.png" />
+            <img src="Anh/header/user.png" id="imgTrangCaNhan"/>
             <!-- <a class="txtDN">Đăng nhập</a> -->
           </li>
           <li>
@@ -45,8 +45,11 @@
             <!-- <a class="txtTB">Thông báo</a> -->
           </li>
           <li>
-            <img src="Anh/header/shopping-cart.png" id="imgCart" onclick="convertToJSON()"/>
-            <!-- <a class="txtGH">Giỏ hàng</a> -->
+            <div class="img-container">
+              <span class="img-cart-content">2</span>
+              <img class="img-cart" src="Anh/header/shopping-cart.png" id="imgCart" onclick="convertToJSON()" />
+            </div>
+            
           </li>
         </ul>
       </div>
@@ -214,7 +217,7 @@
         <section class="sectionSanpham">
           <div class="Sanpham-tpye">
             <picture>
-              <img id="product-img" src="Anh/SanPham/Sales/dau-thuc-vat-tuong-an.jpg">
+              <img id="product-img" src="Anh/SanPham/Sales/dau-thuc-vat-tuong-an.jpg" >
             </picture>
             <p id="product-name">
               Dầu thực vật Tường An Cooking Oil can 5 lít

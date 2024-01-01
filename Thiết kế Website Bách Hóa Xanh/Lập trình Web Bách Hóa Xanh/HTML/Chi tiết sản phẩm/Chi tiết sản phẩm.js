@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Xử lý khi chọn ảnh
   function handleImageSelection(clickedImage) {
     images.forEach((image) => {
-      // Loại bỏ lớp 'selected' của các ảnh và các nút khác
+
       image.classList.remove('selected');
       prevButton.classList.remove('selected');
       nextButton.classList.remove('selected');
@@ -109,17 +109,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Xử lý khi nhấn vào nút prev và next
+
   function handleButtonClick(clickedButton) {
     const buttons = [prevButton, nextButton];
     buttons.forEach((button) => {
-      // Loại bỏ lớp 'selected' của các nút và các ảnh khác
+
       button.classList.remove('selected');
       images.forEach((image) => {
         image.classList.remove('selected');
       });
     });
-    // Thêm lớp 'selected' cho nút được chọn
+
     clickedButton.classList.add('selected');
   }
 
@@ -127,17 +127,15 @@ document.addEventListener('DOMContentLoaded', function () {
     prevButton.addEventListener('click', function (event) {
       handleButtonClick(prevButton);
       showPreviousImage();
-      // Thêm mã xử lý khi nhấn prev ở đây nếu cần
+
     });
     nextButton.addEventListener('click', function (event) {
       handleButtonClick(nextButton);
       showNextImage();
-      // Thêm mã xử lý khi nhấn next ở đây nếu cần
+
     });
   }
 
-  var firstImageSrc = document.querySelector('.image-selector img').getAttribute('src');
-  displayImage(firstImageSrc);
 
   var imgHome = document.getElementById('imgHome');
   imgHome.addEventListener('click', function () {
@@ -149,18 +147,23 @@ document.addEventListener('DOMContentLoaded', function () {
   if (storedProduct) {
     const productData = JSON.parse(storedProduct);
 
+    const displayedImgContainer = document.getElementById('displayed-img-container');
     const productNameElement = document.querySelector('.CTSP-name a');
     const productRatingElement = document.querySelector('.CTSP-DG p:nth-child(1)');
     const productOriginalPriceElement = document.querySelector('.CTSP-cost .CTSP-cost_GiaGoc');
     const productSalePriceElement = document.querySelector('.CTSP-cost a');
     const productDiscountElement = document.querySelector('.CTSP-cost .CTSP-cost-GG');
+    const productQuantityElement = document.querySelector('.CTSP-SL-numbers .ipNumbers');
 
+    displayedImgContainer.innerHTML = `<img src="${productData.img}" alt="${productData.name}">`;
     productNameElement.textContent = productData.name.trim();
-    productRatingElement.textContent = `${productData.stars.trim()} ☆`;
+    productRatingElement.textContent = `${productData.star.trim()} ☆`;
     productOriginalPriceElement.textContent = productData.price.trim();
     productSalePriceElement.textContent = productData.sales.trim();
     productDiscountElement.textContent = productData.pt.trim();
+    productQuantityElement.textContent = productData.quantity || '0'; // Thay 'quantity' bằng key tương ứng trong dữ liệu sản phẩm
   }
+
 
   // Lấy phần tử hình ảnh từ DOM
   const productImageElement = document.getElementById('productImage');
