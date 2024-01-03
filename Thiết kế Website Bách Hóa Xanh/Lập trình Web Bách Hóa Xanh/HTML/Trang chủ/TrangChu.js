@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const phầnTửPhút = document.querySelector("#minutes");
   const phầnTửGiây = document.querySelector("#seconds");
 
-  const thờiGianMụcTiêu = new Date("2024-01-10T00:00:00").getTime();
+  const thờiGianMụcTiêu = new Date("2024-01-05T00:00:00").getTime();
 
   function cậpNhậtĐồngHồ() {
     const thờiGianHiệnTại = new Date().getTime();
@@ -34,13 +34,18 @@ document.addEventListener('DOMContentLoaded', function () {
   const cậpNhậtMỗiGiây = setInterval(cậpNhậtĐồngHồ, 1000);
   cậpNhậtĐồngHồ();
 
+
   // Event listener cho hình ảnh
   var imgDanhMuc = document.getElementById('imgDanhMuc');
   imgDanhMuc.addEventListener('click', function () {
     window.location.href = 'http://127.0.0.1:5500/L%E1%BA%ADp%20tr%C3%ACnh%20Web%20B%C3%A1ch%20H%C3%B3a%20Xanh/HTML/Trang%20danh%20m%E1%BB%A5c/Danhmuc.html';
   });
 
-  // Event listener cho hình ảnh
+  var imgQT = document.getElementById('imgQT');
+  imgQT.addEventListener('click', function () {
+    window.location.href = 'http://127.0.0.1:5500/L%E1%BA%ADp%20tr%C3%ACnh%20Web%20B%C3%A1ch%20H%C3%B3a%20Xanh/HTML/Trang%20qu%E1%BA%A3n%20tr%E1%BB%8B/Trang%20qu%E1%BA%A3n%20tr%E1%BB%8B.html#!/admin';
+  });
+  
   var imgCart = document.getElementById('imgCart');
   imgCart.addEventListener('click', function () {
     window.location.href = 'http://127.0.0.1:5500/L%E1%BA%ADp%20tr%C3%ACnh%20Web%20B%C3%A1ch%20H%C3%B3a%20Xanh/HTML/Trang%20gi%E1%BB%8F%20h%C3%A0ng/Gi%E1%BB%8F%20h%C3%A0ng.html';
@@ -82,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Gọi hàm để cập nhật số lượng khi có sự thay đổi trong danh sách sản phẩm
+
   updateCartCount();
 
 });
@@ -92,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Tự động chạy slide sau mỗi 7 giây
+
 setInterval(function () {
   plusSlides(1);
 }, 7000);
@@ -141,14 +146,21 @@ function addToProductList(element) {
   product.star = parent.querySelector('#product-stars').textContent;
   product.pt = parent.querySelector('#product-pt').textContent;
 
-  // Thêm sản phẩm vào danh sách
-  productList.push(product);
+  // Kiểm tra xem sản phẩm đã có trong danh sách chưa
+  const isProductExist = productList.some(item => item.name === product.name);
 
-  console.log('Sản phẩm đã được thêm vào danh sách:', productList);
-  alert('Sản phẩm đã được thêm vào giỏ hàng');
+  if (isProductExist) {
+    alert('Sản phẩm đã có trong giỏ hàng');
+  } else {
+    // Thêm sản phẩm vào danh sách
+    productList.push(product);
 
-  saveProductListToLocalStorage();
-  location.reload();
+    console.log('Sản phẩm đã được thêm vào danh sách:', productList);
+    alert('Sản phẩm đã được thêm vào giỏ hàng');
+
+    saveProductListToLocalStorage();
+    location.reload();
+  }
 }
 
 

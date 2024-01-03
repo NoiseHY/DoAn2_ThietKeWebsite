@@ -317,9 +317,8 @@
   width           : 200px;
   height          : 50px;
   margin-right    : 20px;
-  border          : 1px solid #54E00C;
+  border          : 1px solid #ccc;
   cursor          : pointer;
-  background-color: white;
   display         : flex;
   align-items     : center;
   justify-content : center;
@@ -327,10 +326,12 @@
   border-radius   : 3px;
 
 }
-
+.btFeedback:hover{
+  border: 1px solid #03a63c;
+}
 
 .btFeedback a {
-  color    : #54E00C;
+  color    : #03a63c;
   font-size: 16px;
 }
 
@@ -417,4 +418,77 @@ footer {
   margin    : 20px 20px;
   text-align: center;
 
+}
+
+.danhmuc-CT{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+
+.danhmuc-CT-sp{
+  width: 240px;
+  margin : 10px;
+  margin-bottom: 20px;
+}
+.danhmuc-CT-sp p{
+  margin-bottom: 10px;
+  font-size: 13px;
+  
+}
+.danhmuc-CT-sp a {
+  font-size: 13px;
+}
+.danhmuc-CT-sp img{
+  width: 100%;
+}
+.danhmuc-CT-sp-star{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.danhmuc-CT-sp-star p{
+  margin-left: 20px;
+}
+.danhmuc-CT-sp-star p> img{
+  height: 20px;
+  width: 20px;
+}
+.danhmuc-CT-sale{
+  margin-top: 10px;
+  width: 100%;
+}
+.danhmuc-CT-sale-txt1{
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+.danhmuc-CT-sale-txt2{
+  color: white;
+  padding: 5px;
+  background-color: red;
+  opacity  : 0;
+  animation: showHide 0.5s infinite;
+}
+.danhmuc-CT-sp-bt{
+  width: 100%;
+  height: 3em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #03a63c;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+
+.danhmuc-CT-sp-bt:hover{
+  border: 1px solid #03a63c;
+}
+.danhmuc-sp{
+  width: 100%;
+}
+main h1{
+  font-size: 20px;
+  
 }
